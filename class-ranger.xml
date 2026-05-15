@@ -64,7 +64,7 @@
 				<tr><td> 7th</td><td class="left">Ranger Archetype Feature</td><td>3</td><td>4</td><td>3</td><td>—</td><td>—</td><td>—</td><td>1d6</td></tr>
 				<tr><td> 8th</td><td class="left">Ability Score Improvement</td><td>3</td><td>4</td><td>3</td><td>—</td><td>—</td><td>—</td><td>1d6</td></tr>
 				<tr><td> 9th</td><td class="left">—</td><td>4</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td><td>1d8</td></tr>
-				<tr><td>10th</td><td class="left">Wilderness Expert</td><td>4</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td><td>1d8</td></tr>
+				<tr><td>10th</td><td class="left">Wilderness Expert, Tireless</td><td>4</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td><td>1d8</td></tr>
 				<tr><td>11th</td><td class="left">Ranger Archetype feature</td><td>4</td><td>4</td><td>3</td><td>3</td><td>—</td><td>—</td><td>1d8</td></tr>
 				<tr><td>12th</td><td class="left">Ability Score Improvement</td><td>5</td><td>4</td><td>3</td><td>3</td><td>—</td><td>—</td><td>1d8</td></tr>
 				<tr><td>13th</td><td class="left">—</td><td>5</td><td>4</td><td>3</td><td>3</td><td>1</td><td>—</td><td>1d8</td></tr>
@@ -84,6 +84,7 @@
             <div element="ID_LASERLL_CLASS_FEATURE_RANGER_ARCHETYPE" />
             <div element="ID_LASERLL_CLASS_FEATURE_RANGER_ASI" />
             <div element="ID_LASERLL_CLASS_FEATURE_RANGER_EXTRA_ATTACK" />
+			<div element="ID_LASERLL_CLASS_FEATURE_RANGER_TIRELESS" />
             <div element="ID_LASERLL_CLASS_FEATURE_RANGER_FERAL_SENSES" />
             <div element="ID_LASERLL_CLASS_FEATURE_RANGER_FOE_SLAYER" />
         </description>
@@ -110,7 +111,7 @@
             <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_ASI" level="4" />
             <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_EXTRA_ATTACK" level="5" />
 			<grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_FERAL_SENSES" level="5" />
-            <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_FERAL_SENSES" level="18" />
+			<grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_TIRELESS" level="10" />
             <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_FOE_SLAYER" level="20" />
         </rules>
         <multiclass id="ID_LASERLL_MULTICLASS_RANGER">
@@ -130,25 +131,25 @@
             </rules>
         </multiclass>
     </element>
-    <element name="Survivalist Knacks" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_RANGER_KNACKS">
+    <element name="Knacks" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_RANGER_KNACKS">
         <description>
-            <p>Your time in the wild has honed your skills, and you have acquired survivalist knacks; exploration, hunting, and tracking skills that imbue you with primal magic abilities.</p>
+            <p>Your time in the wild has honed your skills, and you have acquired Knacks; exploration, hunting, and tracking skills that imbue you with primal magic abilities.</p>
             <p class="indent">At 1st level, you gain one knack of your choice. When you gain certain ranger levels, you gain additional knacks of your choice, as shown in the Knacks Known column of the Ranger Table. When you gain a level in this class, you can choose one of the knacks you know and replace it with another knack that you could learn at that level.</p>
         </description>
         <sheet>
             <description>When you gain a level in this class, you can choose one of the knacks you know and replace it with another knack that you could learn at that level.</description>
         </sheet>
         <rules>
-            <select type="Class Feature" name="Knack (Level 1)" supports="Survivalist Knack LL" level="1" />
-			<select type="Class Feature" name="Knack (Level 2)" supports="Survivalist Knack LL" level="2" />
-            <select type="Class Feature" name="Knack (Level 3)" supports="Survivalist Knack LL" level="3" />
-            <select type="Class Feature" name="Knack (Level 6)" supports="Survivalist Knack LL" level="6" />
-            <select type="Class Feature" name="Knack (Level 9)" supports="Survivalist Knack LL" level="9" />
-            <select type="Class Feature" name="Knack (Level 12)" supports="Survivalist Knack LL" level="12" />
-			<select type="Class Feature" name="Knack (Level 14)" supports="Survivalist Knack LL" level="14" />
-            <select type="Class Feature" name="Knack (Level 16)" supports="Survivalist Knack LL" level="16" />
-            <select type="Class Feature" name="Knack (Level 18)" supports="Survivalist Knack LL" level="18" />
-			<select type="Class Feature" name="Knack (Level 20)" supports="Survivalist Knack LL" level="20" />
+            <select type="Class Feature" name="Knack (Level 1)" supports="Knack LL" level="1" />
+			<select type="Class Feature" name="Knack (Level 2)" supports="Knack LL" level="2" />
+            <select type="Class Feature" name="Knack (Level 3)" supports="Knack LL" level="3" />
+            <select type="Class Feature" name="Knack (Level 6)" supports="Knack LL" level="6" />
+            <select type="Class Feature" name="Knack (Level 9)" supports="Knack LL" level="9" />
+            <select type="Class Feature" name="Knack (Level 12)" supports="Knack LL" level="12" />
+			<select type="Class Feature" name="Knack (Level 14)" supports="Knack LL" level="14" />
+            <select type="Class Feature" name="Knack (Level 16)" supports="Knack LL" level="16" />
+            <select type="Class Feature" name="Knack (Level 18)" supports="Knack LL" level="18" />
+			<select type="Class Feature" name="Knack (Level 20)" supports="Knack LL" level="20" />
         </rules>
     </element>
     <element name="Wilderness Expert" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_RANGER_WILDERNESS_EXPERT">
@@ -176,8 +177,15 @@
         	<p>At certain levels, the size of your Quarry Die increases, as shown in the Quarry Die column of the Ranger class table.</p>
 		</description>
         <sheet>
-            <description>You can use your Bonus Action to mark a creature as your Quarry, for 1 hour any time you hit your Quarry with an attack, you deal an extra </description>
+            <description>You can use your Bonus Action to mark a creature as your Quarry, for 1 hour any time you hit your Quarry with an attack, you deal an extra 1d{{quarry:die}} extra damage </description>
         </sheet>
+		<rules>
+			<stat name="quarry:die" value="4" bonus="quarry" level="2"/>
+			<stat name="quarry:die" value="6" bonus="quarry" level="6"/>
+			<stat name="quarry:die" value="8" bonus="quarry" level="10"/>
+			<stat name="quarry:die" value="10" bonus="quarry" level="14"/>
+			<stat name="quarry:die" value="12" bonus="quarry" level="17"/>
+		</rules>
     </element>
     <element name="Fighting Style" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_RANGER_FIGHTING_STYLE">
         <description>
@@ -361,10 +369,10 @@
         </sheet>
     </element>
 
-    <!--Survivalist Knacks-->
+    <!--Knacks-->
 
-    <element name="Alpine Adept" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_ALPINE_ADEPT">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Alpine Adept" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_ALPINE_ADEPT">
+        <supports>Knack LL</supports>
         <prerequisite>6th level ranger</prerequisite>
         <requirements>[level:ranger:6]</requirements>
         <description>
@@ -381,8 +389,8 @@
         </rules>
     </element>
 
-    <element name="Aquatic Adept" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_AQUATIC_ADEPT">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Aquatic Adept" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_AQUATIC_ADEPT">
+        <supports>Knack LL</supports>
         <prerequisite>6th level ranger</prerequisite>
         <requirements>[level:ranger:6]</requirements>
         <description>
@@ -399,8 +407,8 @@
         </rules>
     </element>
 
-    <element name="Explorer 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_EXPLORER1">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Explorer 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_EXPLORER1">
+        <supports>Knack LL</supports>
         <prerequisite></prerequisite>
         <requirements>[level:ranger:1]</requirements>
         <description>
@@ -410,10 +418,10 @@
             <description>You, and any of your companions, cannot become lost, except by magical means, while traveling in natural environments.</description>
         </sheet>
     </element>
-    <element name="Explorer 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_EXPLORER2">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Explorer 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_EXPLORER2">
+        <supports>Knack LL</supports>
         <prerequisite>6th level ranger, Explorer 1</prerequisite>
-        <requirements>[level:ranger:6], ID_LASERLL_SURVIVALIST_KNACKS_EXPLORER1</requirements>
+        <requirements>[level:ranger:6], KnacksID_LASERLL_KNACKS_EXPLORER1</requirements>
         <description>
             <p><em>Prerequisite:</em> 6th level ranger, Explorer 1</p>
             <p>At the end of each long rest, you can attune to your present environment. Examples include, but are not limited to: arctic, coast, desert, forest, grassland, mountain, or swamp. While in your attuned environment you gain the following benefits:</p>
@@ -429,8 +437,8 @@
         </sheet>
     </element>
     
-    <element name="Herbalist 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_HERBALIST1">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Herbalist 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_HERBALIST1">
+        <supports>Knack LL</supports>
         <prerequisite></prerequisite>
         <requirements>[level:ranger:1]</requirements>
         <description>
@@ -440,10 +448,10 @@
             <description>You have advantage on Intelligence (Nature) checks to identify the medicinal properties of plants, and Wisdom (Medicine) checks made to stabilize creatures.</description>
         </sheet>
     </element>
-    <element name="Herbalist 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_HERBALIST2">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Herbalist 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_HERBALIST2">
+        <supports>Knack LL</supports>
         <prerequisite>3rd level ranger, Herbalist 1</prerequisite>
-        <requirements>[level:ranger:3], ID_LASERLL_SURVIVALIST_KNACKS_HERBALIST1</requirements>
+        <requirements>[level:ranger:3], KnacksID_LASERLL_KNACKS_HERBALIST1</requirements>
         <description>
             <p><em>Prerequisite:</em> 3rd level ranger, Herbalist 1</p>
             <p>You have learned to use the fruits of the earth to create healing poultices. You gain proficiency with the herbalism kit.</p>
@@ -456,10 +464,10 @@
             <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
         </rules>
     </element>
-    <element name="Herbalist 3" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_HERBALIST3">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Herbalist 3" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_HERBALIST3">
+        <supports>Knack LL</supports>
         <prerequisite>6th level ranger, Herbalist 2</prerequisite>
-        <requirements>[level:ranger:6], ID_LASERLL_SURVIVALIST_KNACKS_HERBALIST2</requirements>
+        <requirements>[level:ranger:6], KnacksID_LASERLL_KNACKS_HERBALIST2</requirements>
         <description>
             <p><em>Prerequisite:</em> 6th level ranger, Herbalist 2</p>
             <p>You can use your knowledge of local plant life to soothe your allies. If you, and up to five creatures who you touch, spend at least one Hit Die to regain hit points at the end of the short rest, each of those creatures regains an extra 1d8 hit points.</p>
@@ -469,8 +477,8 @@
         </sheet>
     </element>
 
-    <element name="Natural Regeneration" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_NATURAL_REGENERATION">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Natural Regeneration" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_NATURAL_REGENERATION">
+        <supports>Knack LL</supports>
         <prerequisite>14th level ranger</prerequisite>
         <requirements>[level:ranger:14]</requirements>
         <description>
@@ -483,8 +491,8 @@
         </sheet>
     </element>
 
-    <element name="Slayer 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_SLAYER1">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Slayer 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_SLAYER1">
+        <supports>Knack LL</supports>
         <prerequisite>3rd level ranger</prerequisite>
         <requirements>[level:ranger:3]</requirements>
         <description>
@@ -495,10 +503,10 @@
             <description>You have advantage on any Wisdom (Perception) and Wisdom (Survival) checks to track your Ranger's Quarry.</description>
         </sheet>
     </element>
-    <element name="Slayer 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_SLAYER2">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Slayer 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_SLAYER2">
+        <supports>Knack LL</supports>
         <prerequisite>6th level ranger, Slayer 1</prerequisite>
-        <requirements>[level:ranger:6], ID_LASERLL_SURVIVALIST_KNACKS_SLAYER1</requirements>
+        <requirements>[level:ranger:6], KnacksID_LASERLL_KNACKS_SLAYER1</requirements>
         <description>
             <p><em>Prerequisite:</em> 6th level ranger, Slayer 1</p>
             <p>Your tracking abilities have become supernaturally accurate. You always know the exact direction of your Ranger's Quarry while you are on the same plane of existence.</p>
@@ -507,10 +515,10 @@
             <description>You always know the exact direction of your Ranger's Quarry while you are on the same plane of existence.</description>
         </sheet>
     </element>
-    <element name="Slayer 3" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_SLAYER3">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Slayer 3" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_SLAYER3">
+        <supports>Knack LL</supports>
         <prerequisite>14th level ranger, Slayer 2</prerequisite>
-        <requirements>[level:ranger:14], ID_LASERLL_SURVIVALIST_KNACKS_SLAYER2</requirements>
+        <requirements>[level:ranger:14], KnacksID_LASERLL_KNACKS_SLAYER2</requirements>
         <description>
             <p><em>Prerequisite:</em> 14th level ranger, Slayer 2</p>
             <p>Once per turn, when you hit your Ranger's Quarry with a weapon attack, you can force it to make a Constitution saving throw in addition to the normal damage of the attack. On a failed save, it is blinded, deafened, frightened, poisoned, or restrained (your choice) until the start of your next turn.</p>
@@ -520,8 +528,8 @@
         </sheet>
     </element>
 
-    <element name="Stalker 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_STALKER1">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Stalker 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STALKER1">
+        <supports>Knack LL</supports>
         <prerequisite></prerequisite>
         <requirements>[level:ranger:1]</requirements>
         <description>
@@ -531,10 +539,10 @@
             <description>While moving at a normal pace you, and up to five other creatures you are traveling with, produce no tracks or scent, and you cannot be tracked by mundane means unless you wish to be.</description>
         </sheet>
     </element>
-    <element name="Stalker 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_STALKER2">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Stalker 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STALKER2">
+        <supports>Knack LL</supports>
         <prerequisite>3rd level ranger, Stalker 1</prerequisite>
-        <requirements>[level:ranger:3], ID_LASERLL_SURVIVALIST_KNACKS_STALKER1</requirements>
+        <requirements>[level:ranger:3], KnacksID_LASERLL_KNACKS_STALKER1</requirements>
         <description>
             <p><em>Prerequisite:</em> 3rd level ranger, Stalker 1</p>
             <p>You have learned to hunt your prey while remaining unseen. You can take the Hide action as a bonus action on your turn.</p>
@@ -543,10 +551,10 @@
             <description action="Bonus Action">You can take the Hide action as a bonus action on your turn.</description>
         </sheet>
     </element>
-    <element name="Stalker 3" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_STALKER3">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Stalker 3" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STALKER3">
+        <supports>Knack LL</supports>
         <prerequisite>9th level ranger, Stalker 2</prerequisite>
-        <requirements>[level:ranger:9], ID_LASERLL_SURVIVALIST_KNACKS_STALKER2</requirements>
+        <requirements>[level:ranger:9], KnacksID_LASERLL_KNACKS_STALKER2</requirements>
         <description>
             <p><em>Prerequisite:</em> 9th level ranger, Stalker 2</p>
             <p>You can conceal yourself from even the most advanced magic. You are always under the effects of the nondetection spell, and you cannot be tracked divination magic or other magical means unless you wish to be.</p>
@@ -555,10 +563,10 @@
             <description>You are always under the effects of the nondetection spell, and you cannot be tracked divination magic or other magical means unless you wish to be.</description>
         </sheet>
     </element>
-    <element name="Stalker 4" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_STALKER4">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Stalker 4" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STALKER4">
+        <supports>Knack LL</supports>
         <prerequisite>14th level ranger, Stalker 3</prerequisite>
-        <requirements>[level:ranger:14], ID_LASERLL_SURVIVALIST_KNACKS_STALKER3</requirements>
+        <requirements>[level:ranger:14], KnacksID_LASERLL_KNACKS_STALKER3</requirements>
         <description>
             <p><em>Prerequisite:</em> 14th level ranger, Stalker 3</p>
             <p>You can ward yourself with nature magic to briefly disappear from sight. When you take the Hide action on your turn, you, along with anything you are wearing, carrying, or have equipped, becomes invisible until the start of your next turn.</p>
@@ -569,8 +577,8 @@
         </sheet>
     </element>
 
-    <element name="Strider 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_STRIDER1">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Strider 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STRIDER1">
+        <supports>Knack LL</supports>
         <prerequisite></prerequisite>
         <requirements>[level:ranger:1]</requirements>
         <description>
@@ -581,10 +589,10 @@
             <description>You ignore the effects of difficult terrain imposed by natural environments, such as forest undergrowth, snow drifts, swamp, or marshlands. Also, you, and up to five other creatures you are traveling with, do not have your travel slowed by difficult terrain.</description>
         </sheet>
     </element>
-    <element name="Strider 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_STRIDER2">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Strider 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STRIDER2">
+        <supports>Knack LL</supports>
         <prerequisite>3rd level ranger, Strider 1</prerequisite>
-        <requirements>[level:ranger:3], ID_LASERLL_SURVIVALIST_KNACKS_STRIDER1</requirements>
+        <requirements>[level:ranger:3], KnacksID_LASERLL_KNACKS_STRIDER1</requirements>
         <description>
             <p><em>Prerequisite:</em> 3rd level ranger, Strider 1</p>
             <p>Once in your sights, you pursue your quarries relentlessly. You can take the Dash action as a bonus action on your turn.</p>
@@ -593,10 +601,10 @@
             <description action="Bonus Action">You can take the Dash action as a bonus action on your turn.</description>
         </sheet>
     </element>
-    <element name="Strider 3" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_STRIDER3">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Strider 3" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STRIDER3">
+        <supports>Knack LL</supports>
         <prerequisite>6th level ranger, Strider 2</prerequisite>
-        <requirements>[level:ranger:6], ID_LASERLL_SURVIVALIST_KNACKS_STRIDER2</requirements>
+        <requirements>[level:ranger:6], KnacksID_LASERLL_KNACKS_STRIDER2</requirements>
         <description>
             <p><em>Prerequisite:</em> 6th level ranger, Strider 2</p>
             <p>You can surmount almost any obstacle that would block your path. Your base movement speed increases by 10 feet, and you ignore the effects of difficult terrain imposed by spells, magical phenomena, and any other magical effects.</p>
@@ -608,10 +616,10 @@
             <stat name="speed" value="10" />
         </rules>
     </element>
-    <element name="Strider 4" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_STRIDER4">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Strider 4" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STRIDER4">
+        <supports>Knack LL</supports>
         <prerequisite>14th level ranger, Strider 3</prerequisite>
-        <requirements>[level:ranger:14], ID_LASERLL_SURVIVALIST_KNACKS_STRIDER3</requirements>
+        <requirements>[level:ranger:14], KnacksID_LASERLL_KNACKS_STRIDER3</requirements>
         <description>
             <p><em>Prerequisite:</em> 14th level ranger, Strider 3</p>
             <p>You move through the world unhindered by even the most powerful magic and restraints. You are always under the effects of the freedom of movement spell while conscious.</p>
@@ -624,8 +632,8 @@
         </rules>
     </element>
 
-    <element name="Survivor 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_SURVIVOR1">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Survivor 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_SURVIVOR1">
+        <supports>Knack LL</supports>
         <prerequisite>6th level ranger</prerequisite>
         <requirements>[level:ranger:6]</requirements>
         <description>
@@ -636,10 +644,10 @@
             <description action="Bonus Action">As a bonus action on your turn, you can grant yourself {{constitution:modifier}} temporary hit points (minimum of 1).</description>
         </sheet>
     </element>
-    <element name="Survivor 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_SURVIVOR2">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Survivor 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_SURVIVOR2">
+        <supports>Knack LL</supports>
         <prerequisite>9th level ranger, Survivor 1</prerequisite>
-        <requirements>[level:ranger:9], ID_LASERLL_SURVIVALIST_KNACKS_SURVIVOR1</requirements>
+        <requirements>[level:ranger:9], KnacksID_LASERLL_KNACKS_SURVIVOR1</requirements>
         <description>
             <p><em>Prerequisite:</em> 9th level ranger, Survivor 1</p>
             <p>You have trained your body to recover more rapidly than most. When you expend Hit Dice to regain hit points at the end of a short rest, you gain a bonus to each Hit Die roll equal to your Wisdom modifier (minimum of 1).</p>
@@ -648,10 +656,10 @@
             <description>When you expend Hit Dice to regain hit points at the end of a short rest, you gain a bonus to each Hit Die roll of {{wisdom:modifier}} (minimum of 1).</description>
         </sheet>
     </element>
-    <element name="Survivor 3" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_SURVIVOR3">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Survivor 3" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_SURVIVOR3">
+        <supports>Knack LL</supports>
         <prerequisite>14th level ranger, Survivor 2</prerequisite>
-        <requirements>[level:ranger:14], ID_LASERLL_SURVIVALIST_KNACKS_SURVIVOR2</requirements>
+        <requirements>[level:ranger:14], KnacksID_LASERLL_KNACKS_SURVIVOR2</requirements>
         <description>
             <p><em>Prerequisite:</em> 9th level ranger, Survivor 2</p>
             <p>You persevere even in the face of death. When you make a death saving throw you gain a bonus to the roll equal to your Wisdom modifier (minimum of 1). If this increases the total to 20 or higher, you gain the benefits of rolling a 20 on the d20.</p>
@@ -661,8 +669,8 @@
         </sheet>
     </element>
 
-    <element name="Wild Insights 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_WILD_INSIGHTS1">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Wild Insights 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_WILD_INSIGHTS1">
+        <supports>Knack LL</supports>
         <prerequisite></prerequisite>
         <requirements>[level:ranger:1]</requirements>
         <description>
@@ -672,10 +680,10 @@
             <description>You can communicate simple ideas to beasts using sounds and gestures, and you have advantage on any Wisdom (Animal Handling) checks you make targeting animals that are already friendly towards you.</description>
         </sheet>
     </element>
-    <element name="Wild Insights 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_SURVIVALIST_KNACKS_WILD_INSIGHTS2">
-        <supports>Survivalist Knack LL</supports>
+    <element name="Wild Insights 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_WILD_INSIGHTS2">
+        <supports>Knack LL</supports>
         <prerequisite>3rd level ranger, Wild Insights 1</prerequisite>
-        <requirements>[level:ranger:3], ID_LASERLL_SURVIVALIST_KNACKS_WILD_INSIGHTS1</requirements>
+        <requirements>[level:ranger:3], KnacksID_LASERLL_KNACKS_WILD_INSIGHTS1</requirements>
         <description>
             <p><em>Prerequisite:</em> 3rd level ranger, Wild Insights 1</p>
             <p>Your familiarity with the natural world has allowed you to bond you with a minor spirit of nature. You learn the find familiar spell. It counts as a ranger spell for you and you always have it prepared, but it doesn't count against the total number of spells you prepare each day. When you cast this spell your familiar is a fey creature.</p>
