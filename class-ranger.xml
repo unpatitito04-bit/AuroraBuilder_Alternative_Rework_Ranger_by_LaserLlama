@@ -55,37 +55,38 @@
 				<thead>
 					<tr><td class="col-5">Level</td><td class="left">Features</td><td class="col-10">Knacks Known</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td><td>Quarry Die</td></tr>
 				</thead>
-				<tr><td> 1st</td><td class="left">Knacks, Wilderness Expert</td><td>1</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-				<tr><td> 2nd</td><td class="left">Ranger's Quarry, Fighting Style, Spellcasting</td><td>1</td><td>2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>1d4</td></tr>
+				<tr><td> 1st</td><td class="left">Knacks, Fighting Style</td><td>1</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 2nd</td><td class="left">Ranger's Quarry, Deft Explorer, Spellcasting</td><td>1</td><td>2</td><td>—</td><td>—</td><td>—</td><td>—</td><td>1d4</td></tr>
 				<tr><td> 3rd</td><td class="left">Ranger Archetype</td><td>2</td><td>3</td><td>—</td><td>—</td><td>—</td><td>—</td><td>1d4</td></tr>
 				<tr><td> 4th</td><td class="left">Ability Score Improvement</td><td>2</td><td>3</td><td>—</td><td>—</td><td>—</td><td>—</td><td>1d4</td></tr>
 				<tr><td> 5th</td><td class="left">Extra Attack, Feral Senses</td><td>2</td><td>4</td><td>2</td><td>—</td><td>—</td><td>—</td><td>1d4</td></tr>
 				<tr><td> 6th</td><td class="left">-</td><td>3</td><td>4</td><td>2</td><td>—</td><td>—</td><td>—</td><td>1d6</td></tr>
 				<tr><td> 7th</td><td class="left">Ranger Archetype Feature</td><td>3</td><td>4</td><td>3</td><td>—</td><td>—</td><td>—</td><td>1d6</td></tr>
 				<tr><td> 8th</td><td class="left">Ability Score Improvement</td><td>3</td><td>4</td><td>3</td><td>—</td><td>—</td><td>—</td><td>1d6</td></tr>
-				<tr><td> 9th</td><td class="left">—</td><td>4</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td><td>1d8</td></tr>
-				<tr><td>10th</td><td class="left">Wilderness Expert, Tireless</td><td>4</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td><td>1d8</td></tr>
+				<tr><td> 9th</td><td class="left">Deft Explorer</td><td>4</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td><td>1d8</td></tr>
+				<tr><td>10th</td><td class="left">Tireless</td><td>4</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td><td>1d8</td></tr>
 				<tr><td>11th</td><td class="left">Ranger Archetype feature</td><td>4</td><td>4</td><td>3</td><td>3</td><td>—</td><td>—</td><td>1d8</td></tr>
 				<tr><td>12th</td><td class="left">Ability Score Improvement</td><td>5</td><td>4</td><td>3</td><td>3</td><td>—</td><td>—</td><td>1d8</td></tr>
 				<tr><td>13th</td><td class="left">—</td><td>5</td><td>4</td><td>3</td><td>3</td><td>1</td><td>—</td><td>1d8</td></tr>
-				<tr><td>14th</td><td class="left">-</td><td>5</td><td>4</td><td>3</td><td>3</td><td>1</td><td>—</td><td>1d10</td></tr>
+				<tr><td>14th</td><td class="left">—</td><td>5</td><td>4</td><td>3</td><td>3</td><td>1</td><td>—</td><td>1d10</td></tr>
 				<tr><td>15th</td><td class="left">Ranger Archetype feature</td><td>6</td><td>4</td><td>3</td><td>3</td><td>2</td><td>—</td><td>1d10</td></tr>
 				<tr><td>16th</td><td class="left">Ability Score Improvement</td><td>6</td><td>4</td><td>3</td><td>3</td><td>2</td><td>—</td><td>1d10</td></tr>
 				<tr><td>17th</td><td class="left">—</td><td>6</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td><td>1d10</td></tr>
-				<tr><td>18th</td><td class="left">Feral Senses</td><td>7</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td><td>1d12</td></tr>
+				<tr><td>18th</td><td class="left">Improved Feral Senses</td><td>7</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td><td>1d12</td></tr>
 				<tr><td>19th</td><td class="left">Ability Score Improvement</td><td>7</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1d12</td></tr>
 				<tr><td>20th</td><td class="left">Foe Slayer</td><td>7</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1d12</td></tr>
 			</table>
             <div element="ID_LASERLL_CLASS_FEATURE_RANGER_KNACKS" />
-            <div element="ID_LASERLL_CLASS_FEATURE_RANGER_WILDERNESS_EXPERT" />
+			<div element="ID_LASERLL_CLASS_FEATURE_RANGER_FIGHTING_STYLE" />
+            <div element="ID_LASERLL_CLASS_FEATURE_RANGER_DEFT_EXPLORER" />
             <div element="ID_LASERLL_CLASS_FEATURE_RANGER_RANGER_QUARRY" />
-            <div element="ID_LASERLL_CLASS_FEATURE_RANGER_FIGHTING_STYLE" />
             <div element="ID_LASERLL_CLASS_FEATURE_RANGER_SPELLCASTING" />
             <div element="ID_LASERLL_CLASS_FEATURE_RANGER_ARCHETYPE" />
             <div element="ID_LASERLL_CLASS_FEATURE_RANGER_ASI" />
             <div element="ID_LASERLL_CLASS_FEATURE_RANGER_EXTRA_ATTACK" />
+			<div element="ID_LASERLL_CLASS_FEATURE_RANGER_FERAL_SENSES" />
 			<div element="ID_LASERLL_CLASS_FEATURE_RANGER_TIRELESS" />
-            <div element="ID_LASERLL_CLASS_FEATURE_RANGER_FERAL_SENSES" />
+			<div element="ID_LASERLL_CLASS_FEATURE_RANGER_IMPROVED_FERAL_SENSES" />
             <div element="ID_LASERLL_CLASS_FEATURE_RANGER_FOE_SLAYER" />
         </description>
         <setters>
@@ -103,15 +104,16 @@
             <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" requirements="!ID_LASERLL_MULTICLASS_RANGER" />
             <select type="Proficiency" name="Skill Proficiency, Ranger" supports="ID_PROFICIENCY_SKILL_ANIMALHANDLING|ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_STEALTH|ID_PROFICIENCY_SKILL_SURVIVAL" number="3" requirements="!ID_LASERLL_MULTICLASS_RANGER" />
             <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_KNACKS" level="1" />
-            <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_WILDERNESS_EXPERT" level="1" />
+			<grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_FIGHTING_STYLE" level="1" />
+            <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_DEFT_EXPLORER" level="2" />
             <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_RANGER_QUARRY" level="2" />
-            <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_FIGHTING_STYLE" level="2" />
             <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_SPELLCASTING" level="2" />
             <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_ARCHETYPE" level="3" />
             <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_ASI" level="4" />
             <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_EXTRA_ATTACK" level="5" />
 			<grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_FERAL_SENSES" level="5" />
 			<grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_TIRELESS" level="10" />
+			<grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_IMPROVED_FERAL_SENSES" level="18" />
             <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_FOE_SLAYER" level="20" />
         </rules>
         <multiclass id="ID_LASERLL_MULTICLASS_RANGER">
@@ -152,19 +154,19 @@
 			<select type="Class Feature" name="Knack (Level 20)" supports="Knack LL" level="20" />
         </rules>
     </element>
-    <element name="Wilderness Expert" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_RANGER_WILDERNESS_EXPERT">
+    <element name="Deft Explorer" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_RANGER_DEFT_EXPLORER">
         <description>
-            <p>Your skill as an explorer and survivor are unsurpassed. At 1st level, choose one of the skill proficiencies you know from the ranger skill list. Your proficiency bonus is doubled for any ability check you make that uses this proficiency. You also learn to speak, read, and write one additional language of your choice. Most rangers choose to learn a language that is spoken by the enemies they specialize in hunting.</p>
-            <p class="indent">Upon reaching 10th level, you select another skill you are proficient in from the ranger skill list to gain the benefits of this feature, and you learn to speak, read, and write one additional language of your choice.</p>
+            <p>Your skill as an explorer and survivor are unsurpassed. At 2nd level, choose one of the skill proficiencies you know from the ranger skill list. Your proficiency bonus is doubled for any ability check you make that uses this proficiency. You also learn to speak, read, and write one additional language of your choice. Most rangers choose to learn a language that is spoken by the enemies they specialize in hunting.</p>
+            <p class="indent">Upon reaching 9th level, you select another skill you are proficient in from the ranger skill list to gain the benefits of this feature, and you learn to speak, read, and write one additional language of your choice.</p>
         </description>
         <sheet>
             <description>Your proficiency bonus is doubled for any ability check you make that uses a skill in which you are proficient of your choice. Additionally, you learn an extra language.</description>
         </sheet>
         <rules>
-            <select type="Class Feature" name="Wilderness Expert (Level 1)" supports="Expertise, Skill" level="1" />
-            <select type="Language" name="Language, Wilderness Expert (Level 1)" supports="Standard||Exotic" level="1" />
-            <select type="Class Feature" name="Wilderness Expert (Level 1)" supports="Expertise, Skill" level="10" />
-            <select type="Language" name="Language, Wilderness Expert (Level 1)" supports="Standard||Exotic" level="10" />
+            <select type="Class Feature" name="Deft Explorer (Level 2)" supports="Expertise, Skill" level="2" />
+            <select type="Language" name="Language, Deft Explorer (Level 2)" supports="Standard||Exotic" level="2" />
+            <select type="Class Feature" name="Deft Explorer (Level 9)" supports="Expertise, Skill" level="9" />
+            <select type="Language" name="Language, Deft Explorer (Level 9)" supports="Standard||Exotic" level="9" />
         </rules>
     </element>
     <element name="Ranger's Quarry" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_RANGER_RANGER_QUARRY">
@@ -176,7 +178,7 @@
 			<p>You can use this feature a number of times equal to your Wisdom modifier (minimum of 1), then you must expend a spell slot to use it again. You regain one use each time you finish a short rest, and all uses when you finish a long rest.</p>
         	<p>At certain levels, the size of your Quarry Die increases, as shown in the Quarry Die column of the Ranger class table.</p>
 		</description>
-        <sheet>
+        <sheet alt="Ranger Quarry" usage="quarry:usage/Long Rest">
             <description>You can use your Bonus Action to mark a creature as your Quarry, for 1 hour any time you hit your Quarry with an attack, you deal an extra 1d{{quarry:die}} extra damage </description>
         </sheet>
 		<rules>
@@ -185,31 +187,29 @@
 			<stat name="quarry:die" value="8" bonus="quarry" level="10"/>
 			<stat name="quarry:die" value="10" bonus="quarry" level="14"/>
 			<stat name="quarry:die" value="12" bonus="quarry" level="17"/>
+			<stat name="quarry:usage" value="1" bonus="base"/>
+			<stat name="quarry:usage" value="wisdom:modifier" bonus="base"/>
 		</rules>
     </element>
     <element name="Fighting Style" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_RANGER_FIGHTING_STYLE">
         <description>
-            <p>At 2nd level, you adopt a particular style of fighting. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.</p>
-            <h5>Archery</h5>
-            <p>You are a master marksman, striking from afar. You gain a +2 bonus to attack rolls you make with ranged weapons.</p>
-            <h5>Blind Fighting</h5>
-            <p>You have honed your other senses to fight even when you cannot see. You have blindsight with a range of 10 feet. Within that range, you can see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you.</p>
-            <h5>Defence</h5>
-            <p>Your training focused on defending yourself from your foes. While you are wearing armor, you gain a +1 bonus to AC.</p>
+            <p>At 1st level, you adopt a particular style of fighting. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again. When you gain a level, you can replace this Fighting Style with another Fighting Style available to the Ranger class.</p>
+            <h5>Balanced Fighting</h5>
+            <p>When wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to weapon damage rolls. You can use a shield and still gain this benefit.</p>
+            <h5>Featherweight Fighting</h5>
+            <p>While you are unarmed or wielding only light weapons, and are not wearing medium or heavy armor, your walking speed increases by 10 feet, and you gain a +1 bonus to your damage rolls with light melee weapons and unarmed strikes.</p>
+            <h5>Hurler</h5>
+            <p>You can draw a Thrown weapon as part of each ranged attack you make, and the Range of your thrown attacks is doubled. When wielding only Thrown weapons, you can make one ranged attack with a Thrown weapon as a bonus action.</p>
             <h5>Druidic Warrior</h5>
             <p>Your connection to the spirits of nature is stronger then most other rangers. You learn two cantrips of your choice from the druid spell list. They count as ranger spells for you, and Wisdom is your spellcasting ability for them.</p>
             <p class="indent">When you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list.</p>
-            <h5>Dueling</h5>
-            <p>You have mastered the art of fighting with a single weapon. When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to weapon damage rolls.</p>
+            <h5>Strongbow</h5>
+            <p>You can use your Strength modifier, in place of Dexterity, for attack and damage rolls with longbows and shortbows. When you do so, you gain a +1 to damage rolls with those weapons.</p>
             <h5>Mariner</h5>
             <p>You have trained to fight on, around, and in the water. As long as you are not wearing medium or heavy armor or using a shield, you have a swimming speed equal to your normal speed, and you gain a +1 bonus to armor class.</p>
-            <h5>Thrown Weapon Fighting</h5>
-            <p>You can draw a weapon that has the thrown property as part of the attack you make with the weapon. In addition, when you hit with a ranged attack using a thrown weapon, you gain a +2 bonus to the damage roll.</p>
-            <h5>Two-Weapon Fighting</h5>
-            <p>When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.</p>
-            <h5>Unarmed Fighting</h5>
-            <p>Your unarmed strikes can deal bludgeoning damage equal to 1d6 + your Strength modifier on hit. If you aren't wielding any weapons or a shield, the d6 becomes a d8.</p>
-            <p class="indent">In addition, at the start of each of your turns, you can deal 1d4 bludgeoning damage to one creature grappled by you.</p>
+            <h5>Mountaineer</h5>
+            <p>So long as you are not wearing heavy armor or a shield, you have a climbing speed equal to your walking speed, and you gain a +1 bonus to your Armor Class. 
+			<p class="indent">Also, whenever you take falling damage, you can use your reaction to reduce the damage by twice your level.</p>
             <h5>Versatile Fighting</h5>
             <p>When you make an attack with a versatile weapon, and you are wielding no other weapon or a shield, you can use your bonus action to make an unarmed strike or shove attack.</p>
             <p class="indent">You can use this bonus action even if you are wielding your versatile weapon with two hands.</p>
@@ -286,10 +286,10 @@
 	</element>
     <element name="Extra Attack" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_RANGER_EXTRA_ATTACK">
         <description>
-			<p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p>
+			<p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn. Moreover, if you use your action to cast a Ranger spell, you can make a single weapon attack with your bonus action on that same turn.</p>
 		</description>
 		<sheet>
-			<description>You can attack twice, instead of once, whenever you take the Attack action on your turn.</description>
+			<description>You can attack twice, instead of once, whenever you take the Attack action on your turn. If you used your action to cast a Ranger spell you can use your bonus action to make a single weapon attack.</description>
 		</sheet>
 		<rules>
 			<stat name="extra attack:count" value="2" level="5" bonus="extra attack" />
@@ -297,7 +297,23 @@
 	</element>
     <element name="Feral Senses" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_RANGER_FERAL_SENSES">
         <description>
-            <p>Starting at 18th level, your enhanced senses allow you to strike with perfect accuracy. Your attack rolls against creatures within 30 feet cannot have disadvantage.</p>
+            <p>You hunt with the skill of an apex predator. At 5th level, you cannot have disadvantage on attack rolls against your Quarry.</p>
+        </description>
+        <sheet>
+            <description>Your attack rolls against creatures within 30 feet cannot have disadvantage.</description>
+        </sheet>
+    </element>
+	<element name="Tireless" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_RANGER_TIRELESS">
+        <description>
+            <p>You are always prepared to hunt, never letting foes rest. Beginning at 10th level, you regain all uses of Ranger's Quarry whenever you finish a short or long rest.</p>
+        </description>
+        <sheet>
+            <description>You regain all uses of Ranger's Quarry in a short rest.</description>
+        </sheet>
+    </element>
+	<element name="Improved Feral Senses" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_RANGER_IMPROVED_FERAL_SENSES">
+        <description>
+			<p>Starting at 18th level, your enhanced senses allow you to strike with perfect accuracy. Your attack rolls against creatures within 30 feet cannot have disadvantage.</p>
         </description>
         <sheet>
             <description>Your attack rolls against creatures within 30 feet cannot have disadvantage.</description>
@@ -314,16 +330,16 @@
 
     <!--Fighting Styles-->
 
-    <element name="Blind Fighting" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_BLIND_FIGHTING">
+    <element name="Balanced Fighting" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_BALANCED_FIGHTING">
         <supports>Fighting Style, Ranger</supports>
         <description>
-            <p>You have honed your other senses to fight even when you cannot see. You have blindsight with a range of 10 feet. Within that range, you can see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you.</p>
+            <p>When wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to weapon damage rolls. You can use a shield and still gain this benefit.</p>
         </description>
         <sheet>
-            <description>You have blindsight with a range of 10 feet. Within that range, you can see anything that isn't behind total cover, even if you're blinded or in darkness. Moreover, you can see an invisible creature within that range, unless the creature successfully hides from you.</description>
+            <description>When wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to weapon damage rolls.</description>
         </sheet>
         <rules>
-            <grant type="Vision" id="ID_VISION_BLINDSIGHT" />
+            <stat name="ac:misc" value="2" bonus="fighting style" equipped="[primary:any]"/>
         </rules>
     </element>
     <element name="Druidic Warrior" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_DRUIDIC_WARRIOR">
@@ -339,14 +355,17 @@
             <select type="Spell" name="Druidic Warrior" supports="Druid,0" number="2" />
         </rules>
     </element>
-    <element name="Thrown Weapon Fighting" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_THROWN_WEAPON_FIGHTING">
+    <element name="Featherweight Fighting" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_FEATHERWEIGHT_FIGHTING">
         <supports>Fighting Style, Ranger</supports>
         <description>
-            <p>You can draw a weapon that has the thrown property as part of the attack you make with the weapon. In addition, when you hit with a ranged attack using a thrown weapon, you gain a +2 bonus to the damage roll.</p>
+            <p>While you are unarmed or wielding only light weapons, and are not wearing medium or heavy armor, your walking speed increases by 10 feet, and you gain a +1 bonus to your damage rolls with light melee weapons and unarmed strikes.</p>
         </description>
         <sheet>
-            <description>You can draw a weapon that has the thrown property as part of the attack you make with the weapon. In addition, when you hit with a ranged attack using a thrown weapon, you gain a +2 bonus to the damage roll.</description>
+            <description> </description>
         </sheet>
+		<rules>
+            <stat name="speed" value="10" equipped="[weapon:light]" equipped="[armor:light]" />
+        </rules>
     </element>
     <element name="Unarmed Fighting" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_UNARMED_FIGHTING">
         <supports>Fighting Style, Ranger</supports>
