@@ -330,16 +330,31 @@
 
     <!--Fighting Styles-->
 
-    <element name="Balanced Fighting" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_BALANCED_FIGHTING">
+    <element name="Mariner" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_MARINER">
         <supports>Fighting Style, Ranger</supports>
         <description>
-            <p>When wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to weapon damage rolls. You can use a shield and still gain this benefit.</p>
+            <p>When you are not wearing heavy armor or a shield, you have a swimming speed equal to your walking speed, and you gain a +1 bonus to your Armor Class.</p>
         </description>
         <sheet>
-            <description>When wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to weapon damage rolls.</description>
+            <description>When you are not wearing heavy armor or a shield, you have a swimming speed equal to your walking speed, and you gain a +1 bonus to your Armor Class.</description>
         </sheet>
         <rules>
-            <stat name="ac:misc" value="2" bonus="fighting style" equipped="[primary:any]"/>
+            <stat name="speed:swim" value="speed" bonus="base" equipped="!([armor:heavy]||[shield:any])"/>
+			<stat name="ac:misc" value="1" equipped="!([armor:heavy]||[shield:any])"/>
+        </rules>
+    </element>
+	<element name="Mountaineer" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_MOUNTAINEER">
+        <supports>Fighting Style, Ranger</supports>
+        <description>
+            <p>So long as you are not wearing heavy armor or a shield, you have a climbing speed equal to your walking speed, and you gain a +1 bonus to your Armor Class.</p>
+			<p class="indent">Also, whenever you take falling damage, you can use your reaction to reduce the damage by twice your level.</p>
+        </description>
+        <sheet>
+            <description>So long as you are not wearing heavy armor or a shield, you have a climbing speed equal to your walking speed, and you gain a +1 bonus to your Armor Class. whenever you take falling damage, you can use your reaction to reduce the damage by twice your level.</description>
+        </sheet>
+        <rules>
+            <stat name="speed:climb" value="speed" bonus="base" equipped="!([armor:heavy]||[shield:any])"/>
+			<stat name="ac:misc" value="1" equipped="!([armor:heavy]||[shield:any])"/>
         </rules>
     </element>
     <element name="Druidic Warrior" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_DRUIDIC_WARRIOR">
@@ -357,24 +372,29 @@
     </element>
     <element name="Featherweight Fighting" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_FEATHERWEIGHT_FIGHTING">
         <supports>Fighting Style, Ranger</supports>
-        <description>
-            <p>While you are unarmed or wielding only light weapons, and are not wearing medium or heavy armor, your walking speed increases by 10 feet, and you gain a +1 bonus to your damage rolls with light melee weapons and unarmed strikes.</p>
-        </description>
+        <description>While you are unarmed or wielding only light weapons, and are not wearing medium or heavy armor, your walking speed increases by 10 feet, and you gain a +1 bonus to your damage rolls with light melee weapons and unarmed strikes.</description>
         <sheet>
-            <description> </description>
+            <description>While you are unarmed or wielding only light weapons, and are not wearing medium or heavy armor, your walking speed increases by 10 feet, and you gain a +1 bonus to your damage rolls with light melee weapons and unarmed strikes.</description>
         </sheet>
 		<rules>
-            <stat name="speed" value="10" equipped="[weapon:light]" equipped="[armor:light]" />
+            <stat name="speed" value="10" equipped="([weapon:light]||[armor:light])" equipped="!([armor:heavy]||[shield:any]||[armor:heavy])" />
         </rules>
     </element>
-    <element name="Unarmed Fighting" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_UNARMED_FIGHTING">
+    <element name="Hurler" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_HURLER">
         <supports>Fighting Style, Ranger</supports>
         <description>
-            <p>Your unarmed strikes can deal bludgeoning damage equal to 1d6 + your Strength modifier on hit. If you aren't wielding any weapons or a shield, the d6 becomes a d8.</p>
-            <p class="indent">In addition, at the start of each of your turns, you can deal 1d4 bludgeoning damage to one creature grappled by you.</p>
+            <p>You can draw a Thrown weapon as part of each ranged attack you make, and the Range of your thrown attacks is doubled.</p>
+            <p class="indent">When wielding only Thrown weapons, you can make one ranged attack with a Thrown weapon as a bonus action.</p>
         </description>
         <sheet>
-            <description>Your unarmed strikes can deal bludgeoning damage equal to 1d6 + {{strength:modifier}} on hit. If you aren't wielding any weapons or a shield, the d6 becomes a d8. In addition, at the start of each of your turns, you can deal 1d4 bludgeoning damage to one creature grappled by you.</description>
+            <description>You can draw a Thrown weapon as part of each ranged attack you make, the Range of your thrown attacks is doubled, and when wielding only Thrown weapons, you can make one ranged attack with a Thrown weapon as a bonus action.</description>
+        </sheet>
+    </element>
+	    <element name="Strongbow" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_STRONGBOW">
+        <supports>Fighting Style, Ranger</supports>
+        <description>You can use your Strength modifier, in place of Dexterity, for attack and damage rolls with longbows and shortbows. When you do so, you gain a +1 to damage rolls with those weapons.</description>
+        <sheet>
+            <description>You can use your Strength modifier, in place of Dexterity, for attack and damage rolls with longbows and shortbows. When you do so, you gain a +1 to damage rolls with those weapons.</description>
         </sheet>
     </element>
     <element name="Versatile Fighting" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_VERSATILE_FIGHTING">
@@ -390,30 +410,31 @@
 
     <!--Knacks-->
 
-    <element name="Alpine Adept" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_ALPINE_ADEPT">
+    <element name="Alpine Adept" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_ALPINE_ADEPT">
         <supports>Knack LL</supports>
-        <prerequisite>6th level ranger</prerequisite>
-        <requirements>[level:ranger:6]</requirements>
+        <prerequisite>Proficiency in Athletics</prerequisite>
+        <requirements>[ID_PROFICIENCY_SKILL_ATHLETICS]</requirements>
         <description>
-            <p><em>Prerequisite:</em> 6th level ranger</p>
-            <p>You surmount mountainous heights like the most surefooted beasts of the land. You gain a 30 foot climbing speed, and you can use your reaction to reduce any falling damage you take by an amount equal to your ranger level.</p>
-            <p class="indent">If you already have a climbing speed from another feature, your climbing speed increases by 10 feet.</p>
+            <p><em>Prerequisite:</em> Proficiency in Athletics </p>
+            <p>You are an expert climber. You gain a 30-foot climbing speed and Resistance to bludgeoning damage you take from falling. If you already have a climbing speed, it increases by 10 feet.</p>
+            <p class="indent">Finally, you can add double your Proficiency Bonus to any Athletics checks that you make.</p>
         </description>
         <sheet>
-            <description action="Reaction">You can use your reaction to reduce any falling damage you take by {{level:ranger}}.</description>
+            <description>You add double your Proficiency Bonus to any Athletics checks that you make.</description>
         </sheet>
         <rules>
-            <stat name="speed:climb" value="20" bonus="base" />
+            <stat name="speed:climb" value="30" bonus="base" />
             <stat name="speed:climb" value="10" />
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_PROFICIENCY_SKILL_OR_DOUBLE_ATHLETICS"/>
         </rules>
     </element>
 
-    <element name="Aquatic Adept" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_AQUATIC_ADEPT">
+    <element name="Aquatic Adept" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_AQUATIC_ADEPT">
         <supports>Knack LL</supports>
-        <prerequisite>6th level ranger</prerequisite>
-        <requirements>[level:ranger:6]</requirements>
+        <prerequisite>Proficiency in Athletics</prerequisite>
+        <requirements>[ID_PROFICIENCY_SKILL_ATHLETICS]</requirements>
         <description>
-            <p><em>Prerequisite:</em> 6th level ranger</p>
+            <p><em>Prerequisite:</em> Proficiency in Athletics </p>
             <p>You have learned to move through the water like the swiftest creatures of the sea. You gain a 30 foot swimming speed, and you can hold your breath for up to 1 hour while underwater.</p>
             <p class="indent">If you already have a swimming speed from another feature, your swimming speed increases by 10 feet.</p>
         </description>
@@ -426,7 +447,7 @@
         </rules>
     </element>
 
-    <element name="Explorer 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_EXPLORER1">
+    <element name="Explorer 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_EXPLORER1">
         <supports>Knack LL</supports>
         <prerequisite></prerequisite>
         <requirements>[level:ranger:1]</requirements>
@@ -437,10 +458,10 @@
             <description>You, and any of your companions, cannot become lost, except by magical means, while traveling in natural environments.</description>
         </sheet>
     </element>
-    <element name="Explorer 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_EXPLORER2">
+    <element name="Explorer 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_EXPLORER2">
         <supports>Knack LL</supports>
         <prerequisite>6th level ranger, Explorer 1</prerequisite>
-        <requirements>[level:ranger:6], KnacksID_LASERLL_KNACKS_EXPLORER1</requirements>
+        <requirements>[level:ranger:6], ID_LASERLL_KNACKS_EXPLORER1</requirements>
         <description>
             <p><em>Prerequisite:</em> 6th level ranger, Explorer 1</p>
             <p>At the end of each long rest, you can attune to your present environment. Examples include, but are not limited to: arctic, coast, desert, forest, grassland, mountain, or swamp. While in your attuned environment you gain the following benefits:</p>
@@ -456,7 +477,7 @@
         </sheet>
     </element>
     
-    <element name="Herbalist 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_HERBALIST1">
+    <element name="Herbalist 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_HERBALIST1">
         <supports>Knack LL</supports>
         <prerequisite></prerequisite>
         <requirements>[level:ranger:1]</requirements>
@@ -467,10 +488,10 @@
             <description>You have advantage on Intelligence (Nature) checks to identify the medicinal properties of plants, and Wisdom (Medicine) checks made to stabilize creatures.</description>
         </sheet>
     </element>
-    <element name="Herbalist 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_HERBALIST2">
+    <element name="Herbalist 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_HERBALIST2">
         <supports>Knack LL</supports>
         <prerequisite>3rd level ranger, Herbalist 1</prerequisite>
-        <requirements>[level:ranger:3], KnacksID_LASERLL_KNACKS_HERBALIST1</requirements>
+        <requirements>[level:ranger:3], ID_LASERLL_KNACKS_HERBALIST1</requirements>
         <description>
             <p><em>Prerequisite:</em> 3rd level ranger, Herbalist 1</p>
             <p>You have learned to use the fruits of the earth to create healing poultices. You gain proficiency with the herbalism kit.</p>
@@ -483,10 +504,10 @@
             <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
         </rules>
     </element>
-    <element name="Herbalist 3" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_HERBALIST3">
+    <element name="Herbalist 3" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_HERBALIST3">
         <supports>Knack LL</supports>
         <prerequisite>6th level ranger, Herbalist 2</prerequisite>
-        <requirements>[level:ranger:6], KnacksID_LASERLL_KNACKS_HERBALIST2</requirements>
+        <requirements>[level:ranger:6], ID_LASERLL_KNACKS_HERBALIST2</requirements>
         <description>
             <p><em>Prerequisite:</em> 6th level ranger, Herbalist 2</p>
             <p>You can use your knowledge of local plant life to soothe your allies. If you, and up to five creatures who you touch, spend at least one Hit Die to regain hit points at the end of the short rest, each of those creatures regains an extra 1d8 hit points.</p>
@@ -496,7 +517,7 @@
         </sheet>
     </element>
 
-    <element name="Natural Regeneration" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_NATURAL_REGENERATION">
+    <element name="Natural Regeneration" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_NATURAL_REGENERATION">
         <supports>Knack LL</supports>
         <prerequisite>14th level ranger</prerequisite>
         <requirements>[level:ranger:14]</requirements>
@@ -510,7 +531,7 @@
         </sheet>
     </element>
 
-    <element name="Slayer 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_SLAYER1">
+    <element name="Slayer 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_SLAYER1">
         <supports>Knack LL</supports>
         <prerequisite>3rd level ranger</prerequisite>
         <requirements>[level:ranger:3]</requirements>
@@ -522,10 +543,10 @@
             <description>You have advantage on any Wisdom (Perception) and Wisdom (Survival) checks to track your Ranger's Quarry.</description>
         </sheet>
     </element>
-    <element name="Slayer 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_SLAYER2">
+    <element name="Slayer 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_SLAYER2">
         <supports>Knack LL</supports>
         <prerequisite>6th level ranger, Slayer 1</prerequisite>
-        <requirements>[level:ranger:6], KnacksID_LASERLL_KNACKS_SLAYER1</requirements>
+        <requirements>[level:ranger:6], ID_LASERLL_KNACKS_SLAYER1</requirements>
         <description>
             <p><em>Prerequisite:</em> 6th level ranger, Slayer 1</p>
             <p>Your tracking abilities have become supernaturally accurate. You always know the exact direction of your Ranger's Quarry while you are on the same plane of existence.</p>
@@ -534,10 +555,10 @@
             <description>You always know the exact direction of your Ranger's Quarry while you are on the same plane of existence.</description>
         </sheet>
     </element>
-    <element name="Slayer 3" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_SLAYER3">
+    <element name="Slayer 3" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_SLAYER3">
         <supports>Knack LL</supports>
         <prerequisite>14th level ranger, Slayer 2</prerequisite>
-        <requirements>[level:ranger:14], KnacksID_LASERLL_KNACKS_SLAYER2</requirements>
+        <requirements>[level:ranger:14], ID_LASERLL_KNACKS_SLAYER2</requirements>
         <description>
             <p><em>Prerequisite:</em> 14th level ranger, Slayer 2</p>
             <p>Once per turn, when you hit your Ranger's Quarry with a weapon attack, you can force it to make a Constitution saving throw in addition to the normal damage of the attack. On a failed save, it is blinded, deafened, frightened, poisoned, or restrained (your choice) until the start of your next turn.</p>
@@ -547,7 +568,7 @@
         </sheet>
     </element>
 
-    <element name="Stalker 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STALKER1">
+    <element name="Stalker 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_STALKER1">
         <supports>Knack LL</supports>
         <prerequisite></prerequisite>
         <requirements>[level:ranger:1]</requirements>
@@ -558,10 +579,10 @@
             <description>While moving at a normal pace you, and up to five other creatures you are traveling with, produce no tracks or scent, and you cannot be tracked by mundane means unless you wish to be.</description>
         </sheet>
     </element>
-    <element name="Stalker 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STALKER2">
+    <element name="Stalker 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_STALKER2">
         <supports>Knack LL</supports>
         <prerequisite>3rd level ranger, Stalker 1</prerequisite>
-        <requirements>[level:ranger:3], KnacksID_LASERLL_KNACKS_STALKER1</requirements>
+        <requirements>[level:ranger:3], ID_LASERLL_KNACKS_STALKER1</requirements>
         <description>
             <p><em>Prerequisite:</em> 3rd level ranger, Stalker 1</p>
             <p>You have learned to hunt your prey while remaining unseen. You can take the Hide action as a bonus action on your turn.</p>
@@ -570,10 +591,10 @@
             <description action="Bonus Action">You can take the Hide action as a bonus action on your turn.</description>
         </sheet>
     </element>
-    <element name="Stalker 3" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STALKER3">
+    <element name="Stalker 3" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_STALKER3">
         <supports>Knack LL</supports>
         <prerequisite>9th level ranger, Stalker 2</prerequisite>
-        <requirements>[level:ranger:9], KnacksID_LASERLL_KNACKS_STALKER2</requirements>
+        <requirements>[level:ranger:9], ID_LASERLL_KNACKS_STALKER2</requirements>
         <description>
             <p><em>Prerequisite:</em> 9th level ranger, Stalker 2</p>
             <p>You can conceal yourself from even the most advanced magic. You are always under the effects of the nondetection spell, and you cannot be tracked divination magic or other magical means unless you wish to be.</p>
@@ -582,10 +603,10 @@
             <description>You are always under the effects of the nondetection spell, and you cannot be tracked divination magic or other magical means unless you wish to be.</description>
         </sheet>
     </element>
-    <element name="Stalker 4" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STALKER4">
+    <element name="Stalker 4" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_STALKER4">
         <supports>Knack LL</supports>
         <prerequisite>14th level ranger, Stalker 3</prerequisite>
-        <requirements>[level:ranger:14], KnacksID_LASERLL_KNACKS_STALKER3</requirements>
+        <requirements>[level:ranger:14], ID_LASERLL_KNACKS_STALKER3</requirements>
         <description>
             <p><em>Prerequisite:</em> 14th level ranger, Stalker 3</p>
             <p>You can ward yourself with nature magic to briefly disappear from sight. When you take the Hide action on your turn, you, along with anything you are wearing, carrying, or have equipped, becomes invisible until the start of your next turn.</p>
@@ -596,7 +617,7 @@
         </sheet>
     </element>
 
-    <element name="Strider 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STRIDER1">
+    <element name="Strider 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_STRIDER1">
         <supports>Knack LL</supports>
         <prerequisite></prerequisite>
         <requirements>[level:ranger:1]</requirements>
@@ -608,10 +629,10 @@
             <description>You ignore the effects of difficult terrain imposed by natural environments, such as forest undergrowth, snow drifts, swamp, or marshlands. Also, you, and up to five other creatures you are traveling with, do not have your travel slowed by difficult terrain.</description>
         </sheet>
     </element>
-    <element name="Strider 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STRIDER2">
+    <element name="Strider 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_STRIDER2">
         <supports>Knack LL</supports>
         <prerequisite>3rd level ranger, Strider 1</prerequisite>
-        <requirements>[level:ranger:3], KnacksID_LASERLL_KNACKS_STRIDER1</requirements>
+        <requirements>[level:ranger:3], ID_LASERLL_KNACKS_STRIDER1</requirements>
         <description>
             <p><em>Prerequisite:</em> 3rd level ranger, Strider 1</p>
             <p>Once in your sights, you pursue your quarries relentlessly. You can take the Dash action as a bonus action on your turn.</p>
@@ -620,10 +641,10 @@
             <description action="Bonus Action">You can take the Dash action as a bonus action on your turn.</description>
         </sheet>
     </element>
-    <element name="Strider 3" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STRIDER3">
+    <element name="Strider 3" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_STRIDER3">
         <supports>Knack LL</supports>
         <prerequisite>6th level ranger, Strider 2</prerequisite>
-        <requirements>[level:ranger:6], KnacksID_LASERLL_KNACKS_STRIDER2</requirements>
+        <requirements>[level:ranger:6], ID_LASERLL_KNACKS_STRIDER2</requirements>
         <description>
             <p><em>Prerequisite:</em> 6th level ranger, Strider 2</p>
             <p>You can surmount almost any obstacle that would block your path. Your base movement speed increases by 10 feet, and you ignore the effects of difficult terrain imposed by spells, magical phenomena, and any other magical effects.</p>
@@ -635,10 +656,10 @@
             <stat name="speed" value="10" />
         </rules>
     </element>
-    <element name="Strider 4" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_STRIDER4">
+    <element name="Strider 4" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_STRIDER4">
         <supports>Knack LL</supports>
         <prerequisite>14th level ranger, Strider 3</prerequisite>
-        <requirements>[level:ranger:14], KnacksID_LASERLL_KNACKS_STRIDER3</requirements>
+        <requirements>[level:ranger:14], ID_LASERLL_KNACKS_STRIDER3</requirements>
         <description>
             <p><em>Prerequisite:</em> 14th level ranger, Strider 3</p>
             <p>You move through the world unhindered by even the most powerful magic and restraints. You are always under the effects of the freedom of movement spell while conscious.</p>
@@ -651,7 +672,7 @@
         </rules>
     </element>
 
-    <element name="Survivor 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_SURVIVOR1">
+    <element name="Survivor 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_SURVIVOR1">
         <supports>Knack LL</supports>
         <prerequisite>6th level ranger</prerequisite>
         <requirements>[level:ranger:6]</requirements>
@@ -663,10 +684,10 @@
             <description action="Bonus Action">As a bonus action on your turn, you can grant yourself {{constitution:modifier}} temporary hit points (minimum of 1).</description>
         </sheet>
     </element>
-    <element name="Survivor 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_SURVIVOR2">
+    <element name="Survivor 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_SURVIVOR2">
         <supports>Knack LL</supports>
         <prerequisite>9th level ranger, Survivor 1</prerequisite>
-        <requirements>[level:ranger:9], KnacksID_LASERLL_KNACKS_SURVIVOR1</requirements>
+        <requirements>[level:ranger:9], ID_LASERLL_KNACKS_SURVIVOR1</requirements>
         <description>
             <p><em>Prerequisite:</em> 9th level ranger, Survivor 1</p>
             <p>You have trained your body to recover more rapidly than most. When you expend Hit Dice to regain hit points at the end of a short rest, you gain a bonus to each Hit Die roll equal to your Wisdom modifier (minimum of 1).</p>
@@ -675,10 +696,10 @@
             <description>When you expend Hit Dice to regain hit points at the end of a short rest, you gain a bonus to each Hit Die roll of {{wisdom:modifier}} (minimum of 1).</description>
         </sheet>
     </element>
-    <element name="Survivor 3" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_SURVIVOR3">
+    <element name="Survivor 3" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_SURVIVOR3">
         <supports>Knack LL</supports>
         <prerequisite>14th level ranger, Survivor 2</prerequisite>
-        <requirements>[level:ranger:14], KnacksID_LASERLL_KNACKS_SURVIVOR2</requirements>
+        <requirements>[level:ranger:14], ID_LASERLL_KNACKS_SURVIVOR2</requirements>
         <description>
             <p><em>Prerequisite:</em> 9th level ranger, Survivor 2</p>
             <p>You persevere even in the face of death. When you make a death saving throw you gain a bonus to the roll equal to your Wisdom modifier (minimum of 1). If this increases the total to 20 or higher, you gain the benefits of rolling a 20 on the d20.</p>
@@ -688,7 +709,7 @@
         </sheet>
     </element>
 
-    <element name="Wild Insights 1" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_WILD_INSIGHTS1">
+    <element name="Wild Insights 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_WILD_INSIGHTS1">
         <supports>Knack LL</supports>
         <prerequisite></prerequisite>
         <requirements>[level:ranger:1]</requirements>
@@ -699,10 +720,10 @@
             <description>You can communicate simple ideas to beasts using sounds and gestures, and you have advantage on any Wisdom (Animal Handling) checks you make targeting animals that are already friendly towards you.</description>
         </sheet>
     </element>
-    <element name="Wild Insights 2" type="Class Feature" source="LaserLlama's" id="KnacksID_LASERLL_KNACKS_WILD_INSIGHTS2">
+    <element name="Wild Insights 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_WILD_INSIGHTS2">
         <supports>Knack LL</supports>
         <prerequisite>3rd level ranger, Wild Insights 1</prerequisite>
-        <requirements>[level:ranger:3], KnacksID_LASERLL_KNACKS_WILD_INSIGHTS1</requirements>
+        <requirements>[level:ranger:3], ID_LASERLL_KNACKS_WILD_INSIGHTS1</requirements>
         <description>
             <p><em>Prerequisite:</em> 3rd level ranger, Wild Insights 1</p>
             <p>Your familiarity with the natural world has allowed you to bond you with a minor spirit of nature. You learn the find familiar spell. It counts as a ranger spell for you and you always have it prepared, but it doesn't count against the total number of spells you prepare each day. When you cast this spell your familiar is a fey creature.</p>
