@@ -6,7 +6,7 @@
 		</update>
 	</info>
 	<files>
-    <file name="source.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/source.xml" />
-    <file name="class-ranger.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/class-ranger.xml" />
+    <file name="source.xml" url="https://raw.githubusercontent.com/unpatitito04-bit/AuroraBuilder_Alternative_Ranger_by_LaserLlama/main/source.xml" />
+    <file name="class-ranger.xml" url="https://raw.githubusercontent.com/unpatitito04-bit/AuroraBuilder_Alternative_Ranger_by_LaserLlama/main/class-ranger.xml" />
 	</files>
 </index>
