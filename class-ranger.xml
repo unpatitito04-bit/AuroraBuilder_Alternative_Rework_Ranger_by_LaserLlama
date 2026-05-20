@@ -39,7 +39,7 @@
         <li><strong>Tools:</strong> None</li>
     </ul>
     <ul class="unstyled">
-        <li><strong>Saving Throws:</strong> Strength, Dexterity</li>
+        <li><strong>Saving Throws:</strong> Constitution, Wisdom</li>
         <li><strong>Skills:</strong> Choose three from Animal Handling, Athletics, History, Insight, Investigation, Medicine, Nature, Perception, Stealth, and Survival.</li>
     </ul>
     <h5 class="caption">EQUIPMENT</h5>
@@ -100,8 +100,8 @@
             <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" requirements="!ID_LASERLL_MULTICLASS_RANGER" />
             <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" requirements="!ID_LASERLL_MULTICLASS_RANGER" />
             <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" requirements="!ID_LASERLL_MULTICLASS_RANGER" />
-            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_STRENGTH" requirements="!ID_LASERLL_MULTICLASS_RANGER" />
-            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" requirements="!ID_LASERLL_MULTICLASS_RANGER" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_CONSTITUTION" requirements="!ID_LASERLL_MULTICLASS_RANGER" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_WISDOM" requirements="!ID_LASERLL_MULTICLASS_RANGER" />
             <select type="Proficiency" name="Skill Proficiency, Ranger" supports="ID_PROFICIENCY_SKILL_ANIMALHANDLING|ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_STEALTH|ID_PROFICIENCY_SKILL_SURVIVAL" number="3" requirements="!ID_LASERLL_MULTICLASS_RANGER" />
             <grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_KNACKS" level="1" />
 			<grant type="Class Feature" id="ID_LASERLL_CLASS_FEATURE_RANGER_FIGHTING_STYLE" level="1" />
@@ -413,7 +413,7 @@
     <element name="Alpine Adept" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_ALPINE_ADEPT">
         <supports>Knack LL</supports>
         <prerequisite>Proficiency in Athletics</prerequisite>
-        <requirements>[ID_PROFICIENCY_SKILL_ATHLETICS]</requirements>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_ATHLETICS </requirements>
         <description>
             <p><em>Prerequisite:</em> Proficiency in Athletics </p>
             <p>You are an expert climber. You gain a 30-foot climbing speed and Resistance to bludgeoning damage you take from falling. If you already have a climbing speed, it increases by 10 feet.</p>
@@ -425,14 +425,14 @@
         <rules>
             <stat name="speed:climb" value="30" bonus="base" />
             <stat name="speed:climb" value="10" />
-			<grant type="Grants" id="ID_INTERNAL_GRANTS_PROFICIENCY_SKILL_OR_DOUBLE_ATHLETICS"/>
+			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_ATHLETICS" />
         </rules>
     </element>
 
     <element name="Aquatic Adept" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_AQUATIC_ADEPT">
         <supports>Knack LL</supports>
         <prerequisite>Proficiency in Athletics</prerequisite>
-        <requirements>[ID_PROFICIENCY_SKILL_ATHLETICS]</requirements>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_ATHLETICS </requirements>
         <description>
             <p><em>Prerequisite:</em> Proficiency in Athletics </p>
             <p>You have learned to move through the water like the swiftest creatures of the sea. You gain a 30 foot swimming speed, and you can hold your breath for up to 1 hour while underwater.</p>
@@ -444,10 +444,11 @@
         <rules>
             <stat name="speed:swim" value="20" bonus="base" />
             <stat name="speed:swim" value="10" />
+			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_ATHLETICS" />
         </rules>
     </element>
-
-    <element name="Explorer 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_EXPLORER1">
+<!--Later	
+    <element name="Favored Foe" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_FAVORED_FOE">
         <supports>Knack LL</supports>
         <prerequisite></prerequisite>
         <requirements>[level:ranger:1]</requirements>
@@ -458,35 +459,23 @@
             <description>You, and any of your companions, cannot become lost, except by magical means, while traveling in natural environments.</description>
         </sheet>
     </element>
-    <element name="Explorer 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_EXPLORER2">
-        <supports>Knack LL</supports>
-        <prerequisite>6th level ranger, Explorer 1</prerequisite>
-        <requirements>[level:ranger:6], ID_LASERLL_KNACKS_EXPLORER1</requirements>
-        <description>
-            <p><em>Prerequisite:</em> 6th level ranger, Explorer 1</p>
-            <p>At the end of each long rest, you can attune to your present environment. Examples include, but are not limited to: arctic, coast, desert, forest, grassland, mountain, or swamp. While in your attuned environment you gain the following benefits:</p>
-            <ul>
-                <li>You have advantage on Intelligence and Wisdom checks related to the native plants, animals, or ecosystem.</li>
-                <li>You find twice as much food when foraging or hunting.</li>
-                <li>You cannot be surprised unless you are incapacitated.</li>
-                <li>You gain a bonus to your initiative rolls equal to your Wisdom modifier (minimum of 1).</li>
-            </ul>
-        </description>
-        <sheet>
-            <description>At the end of each long rest, you can attune to your present environment. While in your attuned environment you gain the following benefits: You have advantage on Intelligence and Wisdom checks related to the native plants, animals, or ecosystem. You find twice as much food when foraging or hunting. You cannot be surprised unless you are incapacitated. You gain a bonus to your initiative rolls of {{wisdom:modifier}} (minimum of 1).</description>
-        </sheet>
-    </element>
-    
+    -->
     <element name="Herbalist 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_HERBALIST1">
         <supports>Knack LL</supports>
-        <prerequisite></prerequisite>
-        <requirements>[level:ranger:1]</requirements>
+        <prerequisite>Proficiency in Medicine</prerequisite>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_MEDICINE </requirements>
         <description>
-            <p>You have a deep knowledge of plants and their healing properties. You have advantage on Intelligence (Nature) checks to identify the medicinal properties of plants, and Wisdom (Medicine) checks made to stabilize creatures.</p>
-        </description>
+			<p><em>Prerequisite:</em> Proficiency in Medicine </p>
+            <p>You have an extensive knowledge of plants and their healing properties. You gain proficiency with Herbalism Kits, and you automatically succeed on Medicine checks made to stabilize creatures at 0 hit points if you use a Herbalism Kit.</p>
+        	<p class="indent"> Finally, you can add double your Proficiency Bonus to any Medicine or Herbalism Kit checks that you make.
+		</description>
         <sheet>
-            <description>You have advantage on Intelligence (Nature) checks to identify the medicinal properties of plants, and Wisdom (Medicine) checks made to stabilize creatures.</description>
+            <description>You gain proficiency with Herbalism Kits, and you automatically succeed on Medicine checks made to stabilize creatures at 0 hit points if you use a Herbalism Kit.</description>
         </sheet>
+		<rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_MEDICINE" />
+        </rules>
     </element>
     <element name="Herbalist 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_HERBALIST2">
         <supports>Knack LL</supports>
@@ -494,15 +483,11 @@
         <requirements>[level:ranger:3], ID_LASERLL_KNACKS_HERBALIST1</requirements>
         <description>
             <p><em>Prerequisite:</em> 3rd level ranger, Herbalist 1</p>
-            <p>You have learned to use the fruits of the earth to create healing poultices. You gain proficiency with the herbalism kit.</p>
-            <p class="indent">At the end of a long rest, you can use a herbalism kit and local plants to create one potion of healing. This potion retains its potency for a number of days equal to your proficiency bonus, after which it spoils and becomes inert.</p>
+            <p>You have learned to use natural plants and herbs to create healing salves. Over the course of a long rest, you can spend 1 hour using a Herbalism Kit to create one potion of healing, which retains its potency until the end of your next long rest.</p>
         </description>
         <sheet>
-            <description>At the end of a long rest, you can use a herbalism kit and local plants to create one potion of healing. This potion retains its potency for {{proficiency}} days, after which it spoils and becomes inert.</description>
+            <description>Over the course of a long rest, you can spend 1 hour using a Herbalism Kit to create one potion of healing, which retains its potency until the end of your next long rest.</description>
         </sheet>
-        <rules>
-            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
-        </rules>
     </element>
     <element name="Herbalist 3" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_HERBALIST3">
         <supports>Knack LL</supports>
@@ -510,19 +495,23 @@
         <requirements>[level:ranger:6], ID_LASERLL_KNACKS_HERBALIST2</requirements>
         <description>
             <p><em>Prerequisite:</em> 6th level ranger, Herbalist 2</p>
-            <p>You can use your knowledge of local plant life to soothe your allies. If you, and up to five creatures who you touch, spend at least one Hit Die to regain hit points at the end of the short rest, each of those creatures regains an extra 1d8 hit points.</p>
+            <p>When you use your Herbalism Kit to craft potions of healing during a long rest, you craft a number of these potions equal to 1 + your Wisdom modifier (minimum of 2).</p>
         </description>
         <sheet>
             <description>If you, and up to five creatures who you touch, spend at least one Hit Die to regain hit points at the end of the short rest, each of those creatures regains an extra 1d8 hit points.</description>
         </sheet>
+		<rules>
+			<stat name="potion:creation" value="2" bonus="base"/>
+			<stat name="potion:creation" value="wisdom:modifier + 1" bonus="base"/>
+		</rules>
     </element>
 
     <element name="Natural Regeneration" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_NATURAL_REGENERATION">
         <supports>Knack LL</supports>
-        <prerequisite>14th level ranger</prerequisite>
-        <requirements>[level:ranger:14]</requirements>
+        <prerequisite>3rd level ranger</prerequisite>
+        <requirements>[level:ranger:3]</requirements>
         <description>
-            <p><em>Prerequisite:</em> 14th level ranger</p>
+            <p><em>Prerequisite:</em> 3rd level ranger</p>
             <p>You can draw on the surrounding environment to replenish your mystical power. At the end of a short rest, you can choose to recover expended spell slots of a combined level equal to or less than your Wisdom modifier (minimum of 1).</p>
             <p class="indent">Once you use this feature you must complete a long rest before you can use it again.</p>
         </description>
@@ -533,15 +522,19 @@
 
     <element name="Slayer 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_SLAYER1">
         <supports>Knack LL</supports>
-        <prerequisite>3rd level ranger</prerequisite>
-        <requirements>[level:ranger:3]</requirements>
+        <prerequisite>3rd level ranger, Proficiency in Perception</prerequisite>
+        <requirements>[level:ranger:3], ID_PROFICIENCY_SKILL_PERCEPTION</requirements>
         <description>
-            <p><em>Prerequisite:</em> 3rd level ranger</p>
-            <p>Once you have a quarry in your sights it is rare that they escape. You have advantage on any Wisdom (Perception) and Wisdom (Survival) checks to track your Ranger's Quarry.</p>
+            <p><em>Prerequisite:</em> 3rd level ranger, Proficiency in Perception</p>
+            <p>When you hit a creature with an attack, you can mark it as your Quarry, expending a use of Ranger's Quarry as normal, and applying the bonus damage and other benefits on hit.</p>
+			<p class="indent">Finally, you can add double your Proficiency Bonus to any Perception checks that you make.</p>
         </description>
         <sheet>
-            <description>You have advantage on any Wisdom (Perception) and Wisdom (Survival) checks to track your Ranger's Quarry.</description>
+            <description>When you hit a creature with an attack, you can mark it as your Quarry</description>
         </sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_PERCEPTION" />
+        </rules>
     </element>
     <element name="Slayer 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_SLAYER2">
         <supports>Knack LL</supports>
@@ -549,10 +542,11 @@
         <requirements>[level:ranger:6], ID_LASERLL_KNACKS_SLAYER1</requirements>
         <description>
             <p><em>Prerequisite:</em> 6th level ranger, Slayer 1</p>
-            <p>Your tracking abilities have become supernaturally accurate. You always know the exact direction of your Ranger's Quarry while you are on the same plane of existence.</p>
-        </description>
+            <p>Your tracking abilities have become supernaturally accurate. You can mark a creature as your Quarry by studying signs of its passing, like tracks, left within the past 24 hours.</p>
+        	<p class="indent">Also, when you mark a creature as your Quarry, the mark lasts indefinitley and only ends if you mark another creature.</p>
+		</description>
         <sheet>
-            <description>You always know the exact direction of your Ranger's Quarry while you are on the same plane of existence.</description>
+            <description> You can mark a creature as your Quarry by studying signs of its passing, like tracks, left within the past 24 hours, the mark lasts indefinitley and only ends if you mark another creature.</description>
         </sheet>
     </element>
     <element name="Slayer 3" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_SLAYER3">
@@ -561,23 +555,28 @@
         <requirements>[level:ranger:14], ID_LASERLL_KNACKS_SLAYER2</requirements>
         <description>
             <p><em>Prerequisite:</em> 14th level ranger, Slayer 2</p>
-            <p>Once per turn, when you hit your Ranger's Quarry with a weapon attack, you can force it to make a Constitution saving throw in addition to the normal damage of the attack. On a failed save, it is blinded, deafened, frightened, poisoned, or restrained (your choice) until the start of your next turn.</p>
+            <p>Once per turn, when you hit your Ranger's Quarry with a weapon attack, you can force it to make a Constitution saving throw in addition to the normal damage of the attack. On a failed save, you choose if it is Blinded, Deafened, unable to speak, or Restrained until the start of your following turn.</p>
         </description>
         <sheet>
-            <description>Once per turn, when you hit your Ranger's Quarry with a weapon attack, you can force it to make a Constitution saving throw in addition to the normal damage of the attack. On a failed save, it is blinded, deafened, frightened, poisoned, or restrained (your choice) until the start of your next turn.</description>
+            <description>Once per turn, when you hit your Ranger's Quarry with a weapon attack, you can force it to make a Constitution saving throw in addition to the normal damage of the attack. On a failed save, you choose if it is Blinded, Deafened, unable to speak, or Restrained until the start of your following turn.</description>
         </sheet>
     </element>
 
     <element name="Stalker 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_STALKER1">
         <supports>Knack LL</supports>
-        <prerequisite></prerequisite>
-        <requirements>[level:ranger:1]</requirements>
+        <prerequisite>Proficiency in Stealth</prerequisite>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_STEALTH</requirements>
         <description>
-            <p>You are a master at covering your tracks. While moving at a normal pace you, and up to five other creatures you are traveling with, produce no tracks or scent, and you cannot be tracked by mundane means unless you wish to be.</p>
+			<p><em>Prerequisite:</em>Proficiency in Stealth </p>
+            <p>You are a master at remaining undetected in the wilderness. You have advantage on Stealth checks you make to hide while you are in natural environments.</p>
+			<p class="indent">Finally, you can add double your Proficiency Bonus to any Stealth checks that you make.</p>
         </description>
         <sheet>
-            <description>While moving at a normal pace you, and up to five other creatures you are traveling with, produce no tracks or scent, and you cannot be tracked by mundane means unless you wish to be.</description>
+            <description>You have advantage on Stealth checks you make to hide while you are in natural environments.</description>
         </sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_STEALTH" />
+        </rules>
     </element>
     <element name="Stalker 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_STALKER2">
         <supports>Knack LL</supports>
@@ -597,7 +596,7 @@
         <requirements>[level:ranger:9], ID_LASERLL_KNACKS_STALKER2</requirements>
         <description>
             <p><em>Prerequisite:</em> 9th level ranger, Stalker 2</p>
-            <p>You can conceal yourself from even the most advanced magic. You are always under the effects of the nondetection spell, and you cannot be tracked divination magic or other magical means unless you wish to be.</p>
+            <p>You cannot be tracked, even by magic. You are always under the effects of the nondetection spell, and you can't be tracked by Divination magic or magical means unless you wish to be.</p>
         </description>
         <sheet>
             <description>You are always under the effects of the nondetection spell, and you cannot be tracked divination magic or other magical means unless you wish to be.</description>
@@ -609,8 +608,8 @@
         <requirements>[level:ranger:14], ID_LASERLL_KNACKS_STALKER3</requirements>
         <description>
             <p><em>Prerequisite:</em> 14th level ranger, Stalker 3</p>
-            <p>You can ward yourself with nature magic to briefly disappear from sight. When you take the Hide action on your turn, you, along with anything you are wearing, carrying, or have equipped, becomes invisible until the start of your next turn.</p>
-            <p class="indent">This invisibility ends early if you attack or cast a spell.</p>
+            <p>Your mythic skill allow you to become undetectable. Any time you take a Hide action, you, and anything you are wearing or carrying, becomes invisible until the start of your next turn.</p>
+            <p class="indent">This effect instantly ends if you Cast a Spell, or you attack or force a creature to make an ability check or saving throw.</p>
         </description>
         <sheet>
             <description>When you take the Hide action on your turn, you, along with anything you are wearing, carrying, or have equipped, becomes invisible until the start of your next turn. This invisibility ends early if you attack or cast a spell.</description>
@@ -619,15 +618,19 @@
 
     <element name="Strider 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_STRIDER1">
         <supports>Knack LL</supports>
-        <prerequisite></prerequisite>
-        <requirements>[level:ranger:1]</requirements>
+        <prerequisite>Proficiency in Survival</prerequisite>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_SURVIVAL</requirements>
         <description>
-            <p>There are few natural obstacles that you cannot overcome, or guide others through safely. You ignore the effects of difficult terrain imposed by natural environments, such as forest undergrowth, snow drifts, swamp, or marshlands.</p>
-            <p class="indent">Also, you, and up to five other creatures you are traveling with, do not have your travel slowed by difficult terrain.</p>
+			<p><em>Prerequisite:</em>Proficiency in Survival </p>
+            <p>You ignore the effects of difficult terrain imposed by natural environments, you cannot become lost so long as you can see the night sky, and you and up to 10 creatures who travel with you don't have travel slowed by natural difficult terrain.</p>
+            <p class="indent">Finally, you can add double your Proficiency Bonus to any Survival checks that you make.</p>
         </description>
         <sheet>
-            <description>You ignore the effects of difficult terrain imposed by natural environments, such as forest undergrowth, snow drifts, swamp, or marshlands. Also, you, and up to five other creatures you are traveling with, do not have your travel slowed by difficult terrain.</description>
+            <description>You cannot become lost so long as you can see the night sky, and you and up to 10 creatures who travel with you don't have travel slowed by natural difficult terrain.</description>
         </sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_SURVIVAL" />
+        </rules>
     </element>
     <element name="Strider 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_STRIDER2">
         <supports>Knack LL</supports>
@@ -711,14 +714,19 @@
 
     <element name="Wild Insights 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_WILD_INSIGHTS1">
         <supports>Knack LL</supports>
-        <prerequisite></prerequisite>
-        <requirements>[level:ranger:1]</requirements>
+        <prerequisite>Proficiency in Insight</prerequisite>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_INSIGHT</requirements>
         <description>
-            <p>You have a natural way with the wild animals of the world. You can communicate simple ideas to beasts using sounds and gestures, and you have advantage on any Wisdom (Animal Handling) checks you make targeting animals that are already friendly towards you.</p>
-        </description>
+			<p><em>Prerequisite:</em> 1st level ranger, Proficiency in Insight</p>
+            <p>You can verbally communicate with and understand Beasts. However, when communicating with a Beast, its awareness and ability to recall knowledge is limited by its Intelligence.</p>
+        	<p class="indent">Finally, you can add double your Proficiency Bonus to any Insight checks that you make.</p>
+		</description>
         <sheet>
             <description>You can communicate simple ideas to beasts using sounds and gestures, and you have advantage on any Wisdom (Animal Handling) checks you make targeting animals that are already friendly towards you.</description>
         </sheet>
+		<rules>
+			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_INSIGHT" />
+        </rules>
     </element>
     <element name="Wild Insights 2" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_WILD_INSIGHTS2">
         <supports>Knack LL</supports>
