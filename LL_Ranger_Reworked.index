@@ -7,8 +7,6 @@
 	</info>
 	<files>
     <file name="source.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/source.xml" />
-    <file name="cleric-domains.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/cleric-domains.xml" />
-    <file name="class-savant.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/class-savant.xml" />
     <file name="class-ranger.xml" url="https://raw.githubusercontent.com/Zenoverlordian/Aurora-Builder-LaserLlama/main/class-ranger.xml" />
 	</files>
 </index>
