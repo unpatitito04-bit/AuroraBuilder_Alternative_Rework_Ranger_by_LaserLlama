@@ -23,7 +23,7 @@
     <p>Consider the nature of your training. Did you train with a mentor, wandering the wilds together, or did you forge a magical connection to nature in your own way? No matter their background, most rangers choose to adventure to impart their knowledge of the wilds on to the next generation, securing the safety of civilization for years to come.</p>
     <h5 class="caption">QUICK BUILD</h5>
     <p>You can make a ranger quickly by following these suggestions. If you wish to focus on ranged attacks or hunting, make Dexterity your highest ability score, followed by Wisdom. Second, choose the Outlander background.</p>
-    <p class="indent">If you wish to focus more on skirmishing or fighting your foes head-on (like with dual-wielding), make Strength your highest ability score, followed by Constitution. Second, choose the Mercenary background.</p>
+    <p class="indent">If you wish to focus more on skirmishing or  your foes head-on (like with dual-wielding), make Strength your highest ability score, followed by Constitution. Second, choose the Mercenary background.</p>
     <h2>CLASS FEATURES</h2>
     <p>As a ranger, you gain the following class features.</p>
     <h5 class="caption">HIT POINTS</h5>
@@ -194,25 +194,32 @@
     <element name="Fighting Style" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_RANGER_FIGHTING_STYLE">
         <description>
             <p>At 1st level, you adopt a particular style of fighting. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again. When you gain a level, you can replace this Fighting Style with another Fighting Style available to the Ranger class.</p>
-            <h5>Balanced Fighting</h5>
-            <p>When wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to weapon damage rolls. You can use a shield and still gain this benefit.</p>
-            <h5>Featherweight Fighting</h5>
-            <p>While you are unarmed or wielding only light weapons, and are not wearing medium or heavy armor, your walking speed increases by 10 feet, and you gain a +1 bonus to your damage rolls with light melee weapons and unarmed strikes.</p>
-            <h5>Hurler</h5>
-            <p>You can draw a Thrown weapon as part of each ranged attack you make, and the Range of your thrown attacks is doubled. When wielding only Thrown weapons, you can make one ranged attack with a Thrown weapon as a bonus action.</p>
-            <h5>Druidic Warrior</h5>
-            <p>Your connection to the spirits of nature is stronger then most other rangers. You learn two cantrips of your choice from the druid spell list. They count as ranger spells for you, and Wisdom is your spellcasting ability for them.</p>
-            <p class="indent">When you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list.</p>
-            <h5>Strongbow</h5>
-            <p>You can use your Strength modifier, in place of Dexterity, for attack and damage rolls with longbows and shortbows. When you do so, you gain a +1 to damage rolls with those weapons.</p>
             <h5>Mariner</h5>
             <p>You have trained to fight on, around, and in the water. As long as you are not wearing medium or heavy armor or using a shield, you have a swimming speed equal to your normal speed, and you gain a +1 bonus to armor class.</p>
             <h5>Mountaineer</h5>
             <p>So long as you are not wearing heavy armor or a shield, you have a climbing speed equal to your walking speed, and you gain a +1 bonus to your Armor Class. 
 			<p class="indent">Also, whenever you take falling damage, you can use your reaction to reduce the damage by twice your level.</p>
+			<h5>Druidic Warrior</h5>
+            <p>Your connection to the spirits of nature is stronger then most other rangers. You learn two cantrips of your choice from the druid spell list. They count as ranger spells for you, and Wisdom is your spellcasting ability for them.</p>
+            <p class="indent">When you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list.</p>
+            <h5>Featherweight Fighting</h5>
+            <p>While you are unarmed or wielding only light weapons, and are not wearing medium or heavy armor, your walking speed increases by 10 feet, and you gain a +1 bonus to your damage rolls with light melee weapons and unarmed strikes.</p>
+            <h5>Hurler</h5>
+            <p>You can draw a Thrown weapon as part of each ranged attack you make, and the Range of your thrown attacks is doubled. When wielding only Thrown weapons, you can make one ranged attack with a Thrown weapon as a bonus action.</p>
+            <h5>Strongbow</h5>
+            <p>You can use your Strength modifier, in place of Dexterity, for attack and damage rolls with longbows and shortbows. When you do so, you gain a +1 to damage rolls with those weapons.</p>
             <h5>Versatile Fighting</h5>
             <p>When you make an attack with a versatile weapon, and you are wielding no other weapon or a shield, you can use your bonus action to make an unarmed strike or shove attack.</p>
             <p class="indent">You can use this bonus action even if you are wielding your versatile weapon with two hands.</p>
+			<h5>Melee Marksman</h5>
+            <p>Having a hostile creature within 5 feet of you does not impose disadvantage on your ranged weapon attacks, so long as you are attacking a target within 5 feet.</p>
+            <p class="indent">When you make a ranged weapon attack against a creature within 5 feet, it cannot target you with opportunity attacks for the rest of the turn regardless if you hit or missed your attack.</p>
+			h5>Mounted Warrior</h5>
+            <p>While you are riding a controlled mount, both you and your mount gain a +1 bonus to your Armor Class, and you can use a bonus action on each of your turns to command the mount to take one action from its stat block or another action.</p>
+            <p class="indent">Mounting or dismounting costs you only 5 feet of movement.</p>
+			h5>Polearm Fighting</h5>
+            <p>You gain a +1 bonus to damage rolls with glaives, halberds, pikes, quarterstaffs, and spears so long as you are wielding only that weapon and no shield.</p>
+            <p class="indent">When doing so, creatures provoke an opportunity attack from you when they enter or move within your reach with that weapon.</p>
         </description>
         <sheet display="false" />
         <rules>
@@ -405,6 +412,36 @@
         </description>
         <sheet>
             <description>When you make an attack with a versatile weapon, and you are wielding no other weapon or a shield, you can use your bonus action to make an unarmed strike or shove attack. You can use this bonus action even if you are wielding your versatile weapon with two hands.</description>
+        </sheet>
+    </element>
+	<element name="Melee Marksman" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_MELEE_MARKSMAN">
+        <supports>Fighting Style, Ranger</supports>
+        <description>
+            <p>Having a hostile creature within 5 feet of you does not impose disadvantage on your ranged weapon attacks, so long as you are attacking a target within 5 feet.</p>
+            <p class="indent">When you make a ranged weapon attack against a creature within 5 feet, it cannot target you with opportunity attacks for the rest of the turn regardless if you hit or missed your attack.</p>
+        </description>
+        <sheet>
+            <description>Having a hostile creature within 5 feet of you does not impose disadvantage on your ranged weapon attacks, so long as you are attacking a target within 5 feet. When you make a ranged weapon attack against a creature within 5 feet, it cannot target you with opportunity attacks for the rest of the turn regardless if you hit or missed your attack.</description>
+        </sheet>
+    </element>
+	<element name="Mounted Warrior" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_MOUNTED_WARRIOR">
+        <supports>Fighting Style, Ranger</supports>
+        <description>
+            <p>While you are riding a controlled mount, both you and your mount gain a +1 bonus to your Armor Class, and you can use a bonus action on each of your turns to command the mount to take one action from its stat block or another action.</p>
+            <p class="indent">Mounting or dismounting only costs 5 feet of movement</p>
+        </description>
+        <sheet>
+            <description>While you are riding a controlled mount, both you and your mount gain a +1 bonus to your Armor Class, and you can use a bonus action on each of your turns to command the mount to take one action from its stat block. Mounting or dismounting only costs 5 feet of movement</description>
+        </sheet>
+    </element>
+	<element name="Polearm Fighting" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_POLEARM_FIGHTING">
+        <supports>Fighting Style, Ranger</supports>
+        <description>
+            <p>You gain a +1 bonus to damage rolls with glaives, halberds, pikes, quarterstaffs, and spears so long as you are wielding only that weapon and no shield. </p>
+            <p class="indent">When doing so, creatures provoke an opportunity attack from you when they enter or move within your reach with that weapon.</p>
+        </description>
+        <sheet>
+            <description>When you're wielding only a glaive, halberd, pike, quarterstaff or a spear you gain a +1 bonus to damage rolls. When doing so, creatures provoke an opportunity attack from you when they enter or move within the reach of your weapon.</description>
         </sheet>
     </element>
 
