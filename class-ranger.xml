@@ -450,7 +450,7 @@
     <element name="Alpine Adept" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_ALPINE_ADEPT">
         <supports>Knack LL</supports>
         <prerequisite>Proficiency in Athletics</prerequisite>
-        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_ATHLETICS </requirements>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_ATHLETICS</requirements>
         <description>
             <p><em>Prerequisite:</em> Proficiency in Athletics </p>
             <p>You are an expert climber. You gain a 30-foot climbing speed and Resistance to bludgeoning damage you take from falling. If you already have a climbing speed, it increases by 10 feet.</p>
@@ -469,7 +469,7 @@
     <element name="Aquatic Adept" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_AQUATIC_ADEPT">
         <supports>Knack LL</supports>
         <prerequisite>Proficiency in Athletics</prerequisite>
-        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_ATHLETICS </requirements>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_ATHLETICS</requirements>
         <description>
             <p><em>Prerequisite:</em> Proficiency in Athletics </p>
             <p>You have learned to move through the water like the swiftest creatures of the sea. You gain a 30 foot swimming speed, and you can hold your breath for up to 1 hour while underwater.</p>
@@ -527,7 +527,7 @@
 	<element name="Hedge Knight 1" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_KNACKS_HEDGE_KNIGHT1">
         <supports>Knack LL</supports>
         <prerequisite> Strength of 13 </prerequisite>
-        <requirements>[level:ranger:1], [str:13] </requirements>
+        <requirements>[level:ranger:1], [str:13]</requirements>
         <description>
 			<p><em>Prerequisite:</em> Strength of 13 </p>
             <p>Though you live in the wilderness you still have some formal military training.</p>
