@@ -214,7 +214,7 @@
 			<h5>Melee Marksman</h5>
             <p>Having a hostile creature within 5 feet of you does not impose disadvantage on your ranged weapon attacks, so long as you are attacking a target within 5 feet.</p>
             <p class="indent">When you make a ranged weapon attack against a creature within 5 feet, it cannot target you with opportunity attacks for the rest of the turn regardless if you hit or missed your attack.</p>
-			h5>Mounted Warrior</h5>
+			<h5>Mounted Warrior</h5>
             <p>While you are riding a controlled mount, both you and your mount gain a +1 bonus to your Armor Class, and you can use a bonus action on each of your turns to command the mount to take one action from its stat block or another action.</p>
             <p class="indent">Mounting or dismounting costs you only 5 feet of movement.</p>
 			h5>Polearm Fighting</h5>
