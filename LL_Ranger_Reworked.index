@@ -2,11 +2,11 @@
 <index>
 	<info>
 		<update version="0.0.1">
-			<file name="LL_Ranger_Reworked.index" url="https://raw.githubusercontent.com/unpatitito04-bit/AuroraBuilder_Alternative_Ranger_by_LaserLlama/main/LL_Ranger_Reworked.index" />
+			<file name="LL_Ranger_Reworked.index" url="https://raw.githubusercontent.com/unpatitito04-bit/AuroraBuilder_Alternative_Rework_Ranger_by_LaserLlama/refs/heads/main/LL_Ranger_Reworked.index" />
 		</update>
 	</info>
 	<files>
-    <file name="source.xml" url="https://raw.githubusercontent.com/unpatitito04-bit/AuroraBuilder_Alternative_Ranger_by_LaserLlama/main/source.xml" />
-    <file name="class-ranger.xml" url="https://raw.githubusercontent.com/unpatitito04-bit/AuroraBuilder_Alternative_Ranger_by_LaserLlama/main/class-ranger.xml" />
+    <file name="source.xml" url="https://raw.githubusercontent.com/unpatitito04-bit/AuroraBuilder_Alternative_Rework_Ranger_by_LaserLlama/refs/heads/main/source.xml" />
+    <file name="class-ranger.xml" url="https://raw.githubusercontent.com/unpatitito04-bit/AuroraBuilder_Alternative_Rework_Ranger_by_LaserLlama/refs/heads/main/class-ranger.xml" />
 	</files>
 </index>
