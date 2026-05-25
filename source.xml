@@ -7,7 +7,7 @@
         </update>
     </info>
 
-	<element name="laserllama's Alternate Ranger" type="Source" source="laserllama's Alternate Ranger" id="ID_LASERLL_SOURCE_RANGER">
+	<element name="Ranger (Alternative Rework)" type="Source" source="LaserLlama's Rework" id="ID_LASERLL_SOURCE_RANGER">
 		<description>
 			<![CDATA[<p> An alternate version of the ranger class for the world's greatest role playing game. Combine the best of the original ranger and my own personal adjustments to become the Ultimate Hunter </p>]]>
 		</description>
