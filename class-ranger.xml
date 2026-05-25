@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name></name>
-        <update version="3.4.0">
+        <update version="1.0.1">
             <file name="class-ranger.xml" url="https://raw.githubusercontent.com/unpatitito04-bit/AuroraBuilder_Alternative_Rework_Ranger_by_LaserLlama/refs/heads/main/class-ranger.xml" />
         </update>
     </info>
