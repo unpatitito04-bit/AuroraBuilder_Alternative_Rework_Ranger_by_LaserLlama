@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name></name>
-        <update version="1.0.1">
+        <update version="1.0.3">
             <file name="class-ranger.xml" url="https://raw.githubusercontent.com/unpatitito04-bit/AuroraBuilder_Alternative_Rework_Ranger_by_LaserLlama/refs/heads/main/class-ranger.xml" />
         </update>
     </info>
@@ -449,8 +449,8 @@
 
     <element name="Alpine Adept" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_ALPINE_ADEPT">
         <supports>Survivalist Knack LL</supports>
-        <prerequisite></prerequisite>
-        <requirements>[level:ranger:1]</requirements>
+        <prerequisite>Proficiency in Athletics</prerequisite>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_ATHLETICS</requirements>
         <description>
             <p><em>Prerequisite:</em></p>
             <p>You are an expert climber. You gain a 30-foot climbing speed and Resistance to bludgeoning damage you take from falling. If you already have a climbing speed, it increases by 10 feet.</p>
@@ -562,7 +562,7 @@
     <element name="Herbalist 1" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_HERBALIST1">
         <supports>Survivalist Knack LL</supports>
         <prerequisite>Proficiency in Medicine</prerequisite>
-        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_MEDICINE </requirements>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_MEDICINE</requirements>
         <description>
 			<p><em>Prerequisite:</em> Proficiency in Medicine </p>
             <p>You have an extensive knowledge of plants and their healing properties. You gain proficiency with Herbalism Kits, and you automatically succeed on Medicine checks made to stabilize creatures at 0 hit points if you use a Herbalism Kit.</p>
@@ -635,10 +635,10 @@
 			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_ANIMAL_HANDLING" />
         </rules>
    	</element>
-	<element name="Rider 1" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_RIDER2">
+	<element name="Rider 2" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_RIDER2">
         <supports>Survivalist Knack LL</supports>
         <prerequisite> 3rd level ranger, Rider 1</prerequisite>
-        <requirements>[level:ranger:3], ID_LASERLL_REWORK_SURVIVALIST_KNACKS_RIDER1 </requirements>
+        <requirements>[level:ranger:3], ID_LASERLL_REWORK_SURVIVALIST_KNACKS_RIDER1</requirements>
         <description>
             <p><em>Prerequisite:</em> 3rd level ranger, Rider 1 </p>
             <p>You learn the Mounted Warrior Fighting Style, and you can ride trained mounts that are equal to you in size or larger.</p>
@@ -651,10 +651,10 @@
 			<grant type="Fighting Style" id="ID_LASERLL_REWORK_CLASS_FEATURE_FIGHTING_STYLE_MOUNTED_WARRIOR" />
         </rules>
    	</element>
-	<element name="Rider 1" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_RIDER3">
+	<element name="Rider 3" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_RIDER3">
         <supports>Survivalist Knack LL</supports>
         <prerequisite> 6th level ranger, Rider 2</prerequisite>
-        <requirements>[level:ranger:6], ID_LASERLL_REWORK_SURVIVALIST_KNACKS_RIDER2 </requirements>
+        <requirements>[level:ranger:6], ID_LASERLL_REWORK_SURVIVALIST_KNACKS_RIDER2</requirements>
         <description>
             <p><em>Prerequisite:</em> 6th level ranger, Rider 2 </p>
             <p>You are a master of mounted combat. When you are riding a mount and it is hit by an attack, you can use your reaction to become the target of that attack instead.</p>
@@ -899,7 +899,7 @@
         	<p class="indent">Finally, you can add double your Proficiency Bonus to any Insight checks that you make.</p>
 		</description>
         <sheet>
-            <description>During a long rest, you can use a set of Woodcarver's Tools and raw wood to craft a number of arrows, bolts, clubs, javelins, and quarterstaffs equal to your Proficiency Bonus.</description>
+            <description>During a long rest, you can use a set of Woodcarver's Tools and raw wood to craft {{proficiency}} of arrows, bolts, clubs, javelins, and quarterstaffs.</description>
         </sheet>
 		<rules>
 			<grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_WOODCARVER_TOOLS" />
