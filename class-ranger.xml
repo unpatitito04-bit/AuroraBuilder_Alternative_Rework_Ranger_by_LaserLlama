@@ -384,7 +384,7 @@
             <description>While you are unarmed or wielding only light weapons, and are not wearing medium or heavy armor, your walking speed increases by 10 feet, and you gain a +1 bonus to your damage rolls with light melee weapons and unarmed strikes.</description>
         </sheet>
 		<rules>
-            <stat name="speed" value="10" equipped="([weapon:light]||[armor:light])" equipped="!([armor:heavy]||[shield:any]||[armor:heavy])" />
+            <stat name="speed" value="10" equipped="!([armor:heavy]||[shield:any]||[armor:heavy])" />
         </rules>
     </element>
     <element name="Hurler" type="Class Feature" source="LaserLlama's" id="ID_LASERLL_CLASS_FEATURE_FIGHTING_STYLE_HURLER">
