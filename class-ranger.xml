@@ -163,10 +163,14 @@
             <description>Your proficiency bonus is doubled for any ability check you make that uses a skill in which you are proficient of your choice. Additionally, you learn an extra language.</description>
         </sheet>
         <rules>
+		<!--Removing expertise because of knacks
             <select type="Class Feature" name="Deft Explorer (Level 2)" supports="Expertise, Skill" level="2" />
+			<select type="Class Feature" name="Deft Explorer (Level 9)" supports="Expertise, Skill" level="9" />
+		-->
             <select type="Language" name="Language, Deft Explorer (Level 2)" supports="Standard||Exotic" level="2" />
-            <select type="Class Feature" name="Deft Explorer (Level 9)" supports="Expertise, Skill" level="9" />
             <select type="Language" name="Language, Deft Explorer (Level 9)" supports="Standard||Exotic" level="9" />
+			<stat name="speed" value="10" bonus="base" level="2"/>
+			<stat name="speed" value="10" bonus="base" level="9"/>
         </rules>
     </element>
     <element name="Ranger's Quarry" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_CLASS_FEATURE_RANGER_RANGER_QUARRY">
@@ -178,7 +182,7 @@
 			<p>You can use this feature a number of times equal to your Wisdom modifier (minimum of 1), then you must expend a spell slot to use it again. You regain one use each time you finish a short rest, and all uses when you finish a long rest.</p>
         	<p>At certain levels, the size of your Quarry Die increases, as shown in the Quarry Die column of the Ranger class table.</p>
 		</description>
-        <sheet alt="Ranger Quarry" usage="quarry:usage/Long Rest">
+        <sheet alt="Ranger Quarry" usage="{{quarry:usage}}/Long Rest">
             <description>You can use your Bonus Action to mark a creature as your Quarry, for 1 hour any time you hit your Quarry with an attack, you deal an extra 1d{{quarry:die}} extra damage </description>
         </sheet>
 		<rules>
@@ -199,9 +203,6 @@
             <h5>Mountaineer</h5>
             <p>So long as you are not wearing heavy armor or a shield, you have a climbing speed equal to your walking speed, and you gain a +1 bonus to your Armor Class. </p>
 			<p class="indent">Also, whenever you take falling damage, you can use your reaction to reduce the damage by twice your level.</p>
-			<h5>Druidic Warrior</h5>
-            <p>Your connection to the spirits of nature is stronger then most other rangers. You learn two cantrips of your choice from the druid spell list. They count as ranger spells for you, and Wisdom is your spellcasting ability for them.</p>
-            <p class="indent">When you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list.</p>
             <h5>Featherweight Fighting</h5>
             <p>While you are unarmed or wielding only light weapons, and are not wearing medium or heavy armor, your walking speed increases by 10 feet, and you gain a +1 bonus to your damage rolls with light melee weapons and unarmed strikes.</p>
             <h5>Hurler</h5>
@@ -307,7 +308,7 @@
             <p>You hunt with the skill of an apex predator. At 5th level, you cannot have disadvantage on attack rolls against your Quarry.</p>
         </description>
         <sheet>
-            <description>Your attack rolls against creatures within 30 feet cannot have disadvantage.</description>
+            <description>You cannot have disadvantage on attack rolls against your Quarry.</description>
         </sheet>
     </element>
 	<element name="Tireless" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_CLASS_FEATURE_RANGER_TIRELESS">
@@ -364,19 +365,6 @@
 			<stat name="ac:misc" value="1" equipped="!([armor:heavy]||[shield:any])"/>
         </rules>
     </element>
-    <element name="Druidic Warrior" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_CLASS_FEATURE_FIGHTING_STYLE_DRUIDIC_WARRIOR">
-        <supports>Fighting Style, Ranger</supports>
-        <description>
-            <p>Your connection to the spirits of nature is stronger then most other rangers. You learn two cantrips of your choice from the druid spell list. They count as ranger spells for you, and Wisdom is your spellcasting ability for them.</p>
-            <p class="indent">When you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list.</p>
-        </description>
-        <sheet>
-            <description>You learn two cantrips of your choice from the druid spell list. They count as ranger spells for you, and Wisdom is your spellcasting ability for them. When you gain a level in this class, you can replace one of these cantrips with another cantrip from the druid spell list.</description>
-        </sheet>
-        <rules>
-            <select type="Spell" name="Druidic Warrior" supports="Druid,0" number="2" />
-        </rules>
-    </element>
     <element name="Featherweight Fighting" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_CLASS_FEATURE_FIGHTING_STYLE_FEATHERWEIGHT_FIGHTING">
         <supports>Fighting Style, Ranger</supports>
         <description>While you are unarmed or wielding only light weapons, and are not wearing medium or heavy armor, your walking speed increases by 10 feet, and you gain a +1 bonus to your damage rolls with light melee weapons and unarmed strikes.</description>
@@ -384,7 +372,7 @@
             <description>While you are unarmed or wielding only light weapons, and are not wearing medium or heavy armor, your walking speed increases by 10 feet, and you gain a +1 bonus to your damage rolls with light melee weapons and unarmed strikes.</description>
         </sheet>
 		<rules>
-            <stat name="speed" value="10" equipped="!([armor:heavy]||[shield:any]||[armor:heavy])" />
+            <stat name="speed" value="10" equipped="!([armor:heavy]||[shield:any])" />
         </rules>
     </element>
     <element name="Hurler" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_CLASS_FEATURE_FIGHTING_STYLE_HURLER">
@@ -452,7 +440,7 @@
         <prerequisite>Proficiency in Athletics</prerequisite>
         <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_ATHLETICS</requirements>
         <description>
-            <p><em>Prerequisite:</em></p>
+            <p><em>Prerequisite:</em> Proficiency in Athletics</p>
             <p>You are an expert climber. You gain a 30-foot climbing speed and Resistance to bludgeoning damage you take from falling. If you already have a climbing speed, it increases by 10 feet.</p>
             <p class="indent">Finally, you can add double your Proficiency Bonus to any Athletics checks that you make.</p>
         </description>
@@ -461,7 +449,6 @@
         </sheet>
         <rules>
             <stat name="speed:climb" value="30" bonus="base" />
-            <stat name="speed:climb" value="10" />
 			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_ATHLETICS" />
         </rules>
     </element>
@@ -471,7 +458,7 @@
         <prerequisite>Proficiency in Athletics</prerequisite>
         <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_ATHLETICS</requirements>
         <description>
-            <p><em>Prerequisite:</em>Proficiency in Athletics</p>
+            <p><em>Prerequisite:</em> Proficiency in Athletics</p>
             <p>You have learned to move through the water like the swiftest creatures of the sea. You gain a 30 foot swimming speed, and you can hold your breath for up to 1 hour while underwater.</p>
             <p class="indent">If you already have a swimming speed from another feature, your swimming speed increases by 10 feet.</p>
         </description>
@@ -479,8 +466,7 @@
             <description>You can hold your breath for up to 1 hour while underwater.</description>
         </sheet>
         <rules>
-            <stat name="speed:swim" value="20" bonus="base" />
-            <stat name="speed:swim" value="10" />
+            <stat name="speed:swim" value="30" bonus="base" />
 			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_ATHLETICS" />
         </rules>
     </element>
