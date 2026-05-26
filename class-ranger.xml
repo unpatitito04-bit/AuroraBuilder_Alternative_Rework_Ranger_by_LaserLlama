@@ -169,8 +169,8 @@
 		-->
             <select type="Language" name="Language, Deft Explorer (Level 2)" supports="Standard||Exotic" level="2" />
             <select type="Language" name="Language, Deft Explorer (Level 9)" supports="Standard||Exotic" level="9" />
-			<stat name="speed" value="10" bonus="base" level="2"/>
-			<stat name="speed" value="10" bonus="base" level="9"/>
+			<stat name="innate speed:misc" value="10" level="2" />
+			<stat name="innate speed:misc" value="10" level="9" />
         </rules>
     </element>
     <element name="Ranger's Quarry" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_CLASS_FEATURE_RANGER_RANGER_QUARRY">
@@ -448,7 +448,8 @@
             <description>You add double your Proficiency Bonus to any Athletics checks that you make.</description>
         </sheet>
         <rules>
-            <stat name="speed:climb" value="30" bonus="base" />
+            <stat name="innate speed:climb" value="30" bonus="base" />
+			<stat name="innate speed:climb:misc" value="10" requirements="[innate speed:climb:1]"/>
 			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_ATHLETICS" />
         </rules>
     </element>
@@ -466,10 +467,42 @@
             <description>You can hold your breath for up to 1 hour while underwater.</description>
         </sheet>
         <rules>
-            <stat name="speed:swim" value="30" bonus="base" />
+            <stat name="innate speed:swim" value="30" bonus="base" />
+			<stat name="innate speed:swim:misc" value="10" requirements="[innate speed:swim:1]"/>
 			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_ATHLETICS" />
         </rules>
     </element>
+	<element name="Artic Adept" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_ARTIC_ADEPT">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>Proficiency in Survival</prerequisite>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_SURVIVAL</requirements>
+        <description>
+            <p><em>Prerequisite:</em> Proficiency in Survival</p>
+            <p> You have adapted to the frozen tundra. You gain Resistance to Cold damage, and you add your Ranger level to any Survival checks you make in arctic, snowy, or tundra environments.</p>
+        </description>
+        <sheet>
+            <description>You gain Resistance to Cold damage, and you add +{{level:ranger}} to any Survival checks you make in arctic, snowy, or tundra environments.</description>
+        </sheet>
+        <rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_COLD" />
+        </rules>
+    </element>
+	<element name="Desert Adept" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_DESERT_ADEPT">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>Proficiency in Survival</prerequisite>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_SURVIVAL</requirements>
+        <description>
+            <p><em>Prerequisite:</em> Proficiency in Survival</p>
+            <p>You have adapted arid deserts. You gain Resistance to Fire damage, and you can add your Ranger level to any Survival checks you make in extreme heat or desert environments.</p>
+        </description>
+        <sheet>
+            <description>You gain Resistance to Fire damage, and you add +{{level:ranger}} to any Survival checks you make in extreme heat or desert environments.</description>
+        </sheet>
+        <rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
+        </rules>
+    </element>
+	
 <!--Later	
     <element name="Favored Foe" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_FAVORED_FOE">
         <supports>Survivalist Knack LL</supports>
