@@ -2,7 +2,7 @@
 <elements>
     <info>
         <name></name>
-        <update version="1.0.3">
+        <update version="1.0.5">
             <file name="class-ranger.xml" url="https://raw.githubusercontent.com/unpatitito04-bit/AuroraBuilder_Alternative_Rework_Ranger_by_LaserLlama/refs/heads/main/class-ranger.xml" />
         </update>
     </info>
@@ -163,14 +163,10 @@
             <description>Your proficiency bonus is doubled for any ability check you make that uses a skill in which you are proficient of your choice. Additionally, you learn an extra language.</description>
         </sheet>
         <rules>
-		<!--Removing expertise because of knacks
             <select type="Class Feature" name="Deft Explorer (Level 2)" supports="Expertise, Skill" level="2" />
 			<select type="Class Feature" name="Deft Explorer (Level 9)" supports="Expertise, Skill" level="9" />
-		-->
             <select type="Language" name="Language, Deft Explorer (Level 2)" supports="Standard||Exotic" level="2" />
             <select type="Language" name="Language, Deft Explorer (Level 9)" supports="Standard||Exotic" level="9" />
-			<stat name="innate speed:misc" value="10" level="2" />
-			<stat name="innate speed:misc" value="10" level="9" />
         </rules>
     </element>
     <element name="Ranger's Quarry" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_CLASS_FEATURE_RANGER_RANGER_QUARRY">
@@ -453,7 +449,6 @@
 			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_ATHLETICS" />
         </rules>
     </element>
-
     <element name="Aquatic Adept" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_AQUATIC_ADEPT">
         <supports>Survivalist Knack LL</supports>
         <prerequisite>Proficiency in Athletics</prerequisite>
@@ -502,6 +497,65 @@
 			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_FIRE" />
         </rules>
     </element>
+	<element name="Jungle Adept" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_JUNGLE_ADEPT">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>Proficiency in Survival</prerequisite>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_SURVIVAL</requirements>
+        <description>
+            <p><em>Prerequisite:</em> Proficiency in Survival</p>
+            <p>You have adapted to the deadly jungle. You gain Resistance to Poison damage, and you add your Ranger level to all Survival checks you make in tropical forest or jungle environments.</p>
+        </description>
+        <sheet>
+            <description>You gain Resistance to Poison damage, and you add +{{level:ranger}} to any Survival checks you make in in tropical forest or jungle environments.</description>
+        </sheet>
+        <rules>
+			<grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+        </rules>
+    </element>
+	<element name="Cavern Adept" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_CAVERN_ADEPT">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>Proficiency in Perception</prerequisite>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_PERCEPTION</requirements>
+        <description>
+            <p><em>Prerequisite:</em> Proficiency in Perception</p>
+            <p>You are especially skilled at navigating the winding tunnels under the earth. You gain Darkvision out to a range of 60 feet. If you already have Darkvision, its range increases by 30 feet.</p>
+			<p class="indent"> As a bonus action, you can close your eyes and focus your senses to gain Tremorsense out to a 30-foot radius. You must concentrate on this sense as if concentrating on a spell.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description>You can close your eyes and focus your senses to gain Tremorsense out to a 30-foot radius. You must concentrate on this sense as if concentrating on a spell. </description>
+        </sheet>
+        <rules>
+			<grant type="Vision" id="ID_VISION_LESSER_DARKVISION"/>
+			<stat name="darkvision:range" value="60"/>
+			<stat name="darkvision:range" value="30" requirements="[darkvision:range:1]"/>
+        </rules>
+    </element>
+	<element name="Urban Adept" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_URBAN_ADEPT">
+        <supports>Survivalist Knack LL</supports>
+        <prerequisite>Proficiency in Investigation</prerequisite>
+        <requirements>[level:ranger:1], ID_PROFICIENCY_SKILL_INVESTIGATION</requirements>
+        <description>
+            <p><em>Prerequisite:</em> Proficiency in Investigation</p>
+            <p>Your survival skills are adapted to the seedy underbellies of settlements and civilization. You learn to speak, decode, and leave messages in Thieves' Cant, the language of criminals.</p>
+			<p class="indent"> Moreover, once you complete a long rest in a settlement, you add your Quarry Die to any ability check you make to gather information on that settlement's factions, underworld, or any important infamous figures or creatures.</p>
+			<p class="indent"> Finally, you can add double your Proficiency Bonus to any Investigation checks that you make.</p>
+        </description>
+        <sheet>
+            <description>Once you complete a long rest in a settlement, you add +1d{{quarry:die}} to any ability check you make to gather information on that settlement's factions, underworld, or any important infamous figures or creatures. </description>
+        </sheet>
+        <rules>
+			<grant type="Language" id="ID_WOTC_PHB_LANGUAGE_THIEVES_CANT"/>
+			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_INVESTIGATION" />
+			<stat name="quarry:die" value="4" bonus="quarry" level="2"/>
+			<stat name="quarry:die" value="6" bonus="quarry" level="6"/>
+			<stat name="quarry:die" value="8" bonus="quarry" level="10"/>
+			<stat name="quarry:die" value="10" bonus="quarry" level="14"/>
+			<stat name="quarry:die" value="12" bonus="quarry" level="17"/>
+        </rules>
+    </element>
+
+
+
 	
 <!--Later	
     <element name="Favored Foe" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_FAVORED_FOE">
