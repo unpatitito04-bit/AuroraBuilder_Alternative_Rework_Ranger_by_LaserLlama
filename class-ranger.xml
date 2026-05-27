@@ -446,7 +446,7 @@
         <rules>
             <stat name="innate speed:climb" value="30" bonus="base" />
 			<stat name="innate speed:climb:misc" value="10" requirements="[innate speed:climb:1]"/>
-			<grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SKILL_EXPERTISE_ATHLETICS" />
+			<grant type="Proficiency" id="ID_INTERNAL_GRANTS_PROFICIENCY_SKILL_ATHLETICS_DOUBLE" />
         </rules>
     </element>
     <element name="Aquatic Adept" type="Class Feature" source="LaserLlama's Rework" id="ID_LASERLL_REWORK_SURVIVALIST_KNACKS_AQUATIC_ADEPT">
